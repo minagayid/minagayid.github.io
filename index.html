@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mina Maged Zekry Gayid — Dentist · Clinic Owner · MBA Candidate</title>
+<meta name="description" content="Mina Maged Zekry Gayid — Dentist and dental clinic owner in Aswan, Egypt, MBA candidate blending patient care, healthcare management, and data-driven technology.">
+<meta name="author" content="Mina Maged Zekry Gayid">
+<meta property="og:title" content="Mina Maged Zekry Gayid — Portfolio">
+<meta property="og:description" content="Dentist · Dental Clinic Owner · MBA Candidate — Aswan, Egypt.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2a43; --navy-2:#16395c; --teal:#12a3a3; --teal-d:#0c7c7c;
+  --ink:#1c2b39; --muted:#5b6b7a; --line:#e3e9ef; --bg:#f6f9fb; --card:#ffffff;
+  --shadow:0 10px 30px -12px rgba(15,42,67,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;letter-spacing:-.01em}
+
+/* Nav */
+header.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(10px);background:rgba(246,249,251,.82);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--navy)}
+.brand span{color:var(--teal)}
+.nav-links{display:flex;gap:26px;font-size:.92rem;font-weight:500;color:var(--muted)}
+.nav-links a:hover{color:var(--teal)}
+@media(max-width:680px){.nav-links{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#0c5a5a 130%);color:#fff}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;background:radial-gradient(circle,rgba(18,163,163,.45),transparent 62%);pointer-events:none}
+.hero-in{display:flex;align-items:center;gap:52px;padding:74px 0 82px}
+.hero-text{flex:1;min-width:0}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#8fe6e6;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.35rem);line-height:1.05;font-weight:600;margin-bottom:14px}
+.hero .role{font-size:1.15rem;color:#d7e5f0;font-weight:500}
+.hero .loc{margin-top:6px;color:#9fb6c8;font-size:.98rem}
+.hero p.lede{margin-top:22px;max-width:33rem;color:#cfe0ec;font-size:1.02rem}
+.hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.92rem;transition:.2s}
+.btn-primary{background:var(--teal);color:#03252a}
+.btn-primary:hover{background:#25c2c2;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:var(--teal);color:#8fe6e6}
+.avatar-wrap{flex-shrink:0}
+.avatar{width:230px;height:230px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.14);box-shadow:0 22px 50px -18px rgba(0,0,0,.55)}
+@media(max-width:760px){.hero-in{flex-direction:column-reverse;text-align:center;gap:30px;padding:54px 0 60px}.hero-cta{justify-content:center}.hero p.lede{margin-left:auto;margin-right:auto}.avatar{width:180px;height:180px}}
+
+/* Sections */
+section.block{padding:70px 0}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:34px}
+.sec-head .num{font-family:'Fraunces',serif;color:var(--teal);font-size:1rem;font-weight:600}
+.sec-head h2{font-size:1.7rem;color:var(--navy);font-weight:600}
+.sec-head .rule{flex:1;height:1px;background:var(--line)}
+.lead{font-size:1.06rem;color:var(--muted);max-width:46rem}
+.lead strong{color:var(--ink);font-weight:600}
+
+/* Timeline */
+.tl{display:grid;gap:20px}
+.tl-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);transition:.2s}
+.tl-item:hover{transform:translateY(-3px);border-color:#cfe6e6}
+.tl-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.tl-role{font-weight:700;color:var(--navy);font-size:1.06rem}
+.tl-org{color:var(--teal-d);font-weight:600}
+.tl-date{font-size:.85rem;color:var(--muted);white-space:nowrap;background:#eef5f5;padding:3px 12px;border-radius:999px;font-weight:600}
+.tl-desc{margin-top:8px;color:var(--muted);font-size:.97rem}
+
+/* Grid cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.card h3{font-size:1.05rem;color:var(--navy);margin-bottom:6px;font-weight:600}
+.card .sub{color:var(--teal-d);font-weight:600;font-size:.9rem}
+.card .meta{color:var(--muted);font-size:.88rem;margin-top:4px}
+
+/* Certs */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.cert{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cert .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);margin-top:8px;flex-shrink:0}
+.cert b{color:var(--navy);font-weight:600;font-size:.97rem}
+.cert small{display:block;color:var(--muted);margin-top:2px}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.skillcol{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.skillcol h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-d);margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#eef5f5;color:var(--navy);font-size:.85rem;font-weight:500;padding:6px 13px;border-radius:999px;border:1px solid #dcecec}
+
+/* Currently */
+.now{background:linear-gradient(135deg,#0f2a43,#0c5a5a);color:#fff;border-radius:20px;padding:36px 34px}
+.now h2{color:#fff;font-size:1.5rem;margin-bottom:16px}
+.now ul{list-style:none;display:grid;gap:12px}
+.now li{display:flex;gap:12px;color:#d7ebeb;font-size:1rem}
+.now li::before{content:"→";color:#8fe6e6;font-weight:700}
+
+/* Contact */
+.contact{text-align:center;padding:72px 0 40px}
+.contact h2{font-size:2rem;color:var(--navy);margin-bottom:10px}
+.contact p{color:var(--muted);margin-bottom:26px}
+.links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.link{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:.93rem;color:var(--navy);transition:.2s}
+.link:hover{border-color:var(--teal);color:var(--teal-d);transform:translateY(-2px);box-shadow:var(--shadow)}
+footer{text-align:center;padding:30px 0 40px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <div class="brand">Mina<span>.</span>Gayid</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <span class="eyebrow">Dentist · Healthcare · Technology</span>
+      <h1>Mina Maged<br>Zekry Gayid</h1>
+      <div class="role">Dentist · Dental Clinic Owner · MBA Candidate</div>
+      <div class="loc">Aswan, Egypt</div>
+      <p class="lede">Combining quality patient care with sound operations — and exploring how data and technology can improve healthcare delivery.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:minagayid@gmail.com">Get in touch</a>
+        <a class="btn btn-ghost" href="#experience">View experience</a>
+      </div>
+    </div>
+    <div class="avatar-wrap">
+      <img class="avatar" src="https://raw.githubusercontent.com/minagayid/minagayid/main/assets/mina-headshot-suit.jpg" alt="Mina Maged Zekry Gayid">
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="block reveal" id="about">
+    <div class="sec-head"><span class="num">01</span><h2>About</h2><span class="rule"></span></div>
+    <p class="lead">I'm a practicing <strong>dentist and dental clinic owner</strong> based in Aswan, Egypt, graduated with the <strong>highest honors</strong> from MSA University's Faculty of Dentistry. Alongside clinical practice, I'm expanding into <strong>healthcare management and business</strong>, currently pursuing an MBA at the Arab Academy for Science, Technology &amp; Maritime Transport. Running a clinic taught me as much about people, systems, and decision-making as dentistry did — and I'm increasingly interested in how data and technology can improve healthcare delivery.</p>
+  </section>
+
+  <section class="block reveal" id="experience">
+    <div class="sec-head"><span class="num">02</span><h2>Experience</h2><span class="rule"></span></div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-top">
+          <div><span class="tl-role">Owner &amp; Operator</span> · <span class="tl-org">Happy Dental Clinic</span></div>
+          <span class="tl-date">2023 – Present</span>
+        </div>
+        <p class="tl-desc">Founded and run a private dental practice — clinical care, staff, scheduling, and day-to-day operations.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-top">
+          <div><span class="tl-role">Dentist, Elgozayra Family Medicine Unit</span> · <span class="tl-org">Egypt Healthcare Authority</span></div>
+          <span class="tl-date">2022 – 2024</span>
+        </div>
+        <p class="tl-desc">Delivered primary dental care within Egypt's public family-medicine system.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="education">
+    <div class="sec-head"><span class="num">03</span><h2>Education</h2><span class="rule"></span></div>
+    <div class="grid">
+      <div class="card">
+        <h3>Master of Business Administration</h3>
+        <div class="sub">Arab Academy for Science, Technology &amp; Maritime Transport</div>
+        <div class="meta">2025 – Present</div>
+      </div>
+      <div class="card">
+        <h3>Bachelor of Dentistry</h3>
+        <div class="sub">MSA University</div>
+        <div class="meta">2015 – 2020 · GPA 3.72 · Graduated with Highest Honors</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="certs">
+    <div class="sec-head"><span class="num">04</span><h2>Certifications</h2><span class="rule"></span></div>
+    <div class="certs">
+      <div class="cert"><span class="dot"></span><div><b>Basic Implant Course</b><small>Cairo Dental Syndicate · 2021</small></div></div>
+      <div class="cert"><span class="dot"></span><div><b>Basic Life Support (BLS)</b><small>Egypt Healthcare Authority · 2023</small></div></div>
+      <div class="cert"><span class="dot"></span><div><b>ICDL — Intl. Computer Driving Licence</b><small>Cairo University · 2021</small></div></div>
+      <div class="cert"><span class="dot"></span><div><b>Mini MBA</b><small>Udemy · 2020</small></div></div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="skills">
+    <div class="sec-head"><span class="num">05</span><h2>Skills</h2><span class="rule"></span></div>
+    <div class="skills">
+      <div class="skillcol"><h3>Clinical &amp; Professional</h3><div class="tags"><span class="tag">Dentistry</span><span class="tag">Dental Implants</span><span class="tag">Patient Care</span><span class="tag">Clinic Management</span><span class="tag">Operations</span></div></div>
+      <div class="skillcol"><h3>Business &amp; Analytics</h3><div class="tags"><span class="tag">Business Administration</span><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">Tableau</span><span class="tag">MS Office</span></div></div>
+      <div class="skillcol"><h3>Technical (foundational)</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">AWS</span><span class="tag">Azure</span></div></div>
+      <div class="skillcol"><h3>Languages</h3><div class="tags"><span class="tag">Arabic (native)</span><span class="tag">English (C1)</span></div></div>
+      <div class="skillcol"><h3>Strengths</h3><div class="tags"><span class="tag">Communication</span><span class="tag">Teamwork</span><span class="tag">Organization</span><span class="tag">Problem-Solving</span><span class="tag">Analytical Thinking</span></div></div>
+    </div>
+  </section>
+
+  <section class="block reveal">
+    <div class="now">
+      <h2>Currently</h2>
+      <ul>
+        <li>Studying toward my MBA while growing Happy Dental Clinic</li>
+        <li>Building practical skills in data analysis and programming</li>
+        <li>Open to collaboration at the intersection of healthcare, business, and technology</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact reveal" id="contact">
+    <h2>Get in touch</h2>
+    <p>Open to collaboration where healthcare, business, and technology meet.</p>
+    <div class="links">
+      <a class="link" href="mailto:minagayid@gmail.com">✉ minagayid@gmail.com</a>
+      <a class="link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid-6b5b3a137" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>© <span id="yr"></span> Mina Maged Zekry Gayid · Built with care in Aswan, Egypt</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
