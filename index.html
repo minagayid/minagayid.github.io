@@ -110,6 +110,15 @@ section.block{padding:70px 0}
 .link:hover{border-color:var(--teal);color:var(--teal-d);transform:translateY(-2px);box-shadow:var(--shadow)}
 footer{text-align:center;padding:30px 0 40px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
 
+/* Mina portfolio assistant */
+.mina-assistant-toggle{position:fixed;right:22px;bottom:22px;z-index:80;border:0;border-radius:999px;background:var(--navy);color:#fff;box-shadow:0 16px 34px rgba(15,42,67,.28);padding:12px 16px;display:inline-flex;gap:9px;align-items:center;font:600 .88rem 'Inter',sans-serif;cursor:pointer}
+.mina-assistant-toggle::before{content:"";width:9px;height:9px;border-radius:50%;background:#75ded7;box-shadow:0 0 0 4px rgba(117,222,215,.18)}
+.mina-assistant-toggle span{color:#9be8e3;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.mina-chat{position:fixed;right:22px;bottom:78px;z-index:81;width:min(390px,calc(100vw - 34px));border:1px solid #d8e4eb;border-radius:18px;background:#fff;box-shadow:0 24px 64px rgba(15,42,67,.24);overflow:hidden}.mina-chat[hidden]{display:none}
+.mina-chat-head{display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;padding:17px 18px}.mina-chat-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#07333a;font-family:'Fraunces',serif;font-weight:600}.mina-chat-head strong{display:block;font-size:.96rem}.mina-chat-head small{display:block;margin-top:1px;color:#b8d4e2;font-size:.75rem}.mina-chat-close{margin-left:auto;border:0;background:transparent;color:#dcecf4;font-size:1.35rem;line-height:1;cursor:pointer;padding:4px}
+.mina-chat-body{max-height:430px;overflow:auto;padding:16px;background:#f8fbfc}.mina-chat-message{margin:0 0 11px;padding:11px 13px;border-radius:12px;background:#e7f3f2;color:#24434d;font-size:.88rem;line-height:1.55}.mina-chat-message.user{margin-left:32px;background:#e7eef5;color:#18344d}.mina-chat-options{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}.mina-chat-options button{border:1px solid #b8d9d7;background:#fff;color:var(--teal-d);border-radius:999px;padding:7px 10px;font:600 .75rem 'Inter',sans-serif;cursor:pointer}.mina-chat-options button:hover{background:#e8f7f6}
+.mina-chat-form{display:flex;gap:7px;padding-top:4px}.mina-chat-form input{min-width:0;flex:1;border:1px solid #cddbe3;border-radius:9px;padding:10px 11px;font:400 .85rem 'Inter',sans-serif;color:var(--ink)}.mina-chat-form button{border:0;border-radius:9px;background:var(--teal);color:#07333a;padding:0 13px;font-weight:700;cursor:pointer}.mina-chat-contact{display:block;margin-top:13px;border-top:1px solid #dbe7ec;padding-top:12px;color:var(--navy);font-size:.82rem;font-weight:700}.mina-chat-contact:hover{color:var(--teal-d)}
+@media(max-width:560px){.mina-assistant-toggle{right:14px;bottom:14px}.mina-chat{right:14px;bottom:70px}.mina-chat-body{max-height:58vh}}
 /* reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
@@ -244,5 +253,13 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<button class="mina-assistant-toggle" id="minaAssistantToggle" type="button" aria-expanded="false" aria-controls="minaAssistant"><span>AI guide</span> Ask Mina</button>
+<aside class="mina-chat" id="minaAssistant" hidden role="dialog" aria-label="Mina collaboration guide">
+  <div class="mina-chat-head"><div class="mina-chat-mark">M</div><div><strong>Mina AI</strong><small>Portfolio and collaboration guide</small></div><button class="mina-chat-close" id="minaAssistantClose" type="button" aria-label="Close assistant">×</button></div>
+  <div class="mina-chat-body"><div id="minaChatTranscript" aria-live="polite"><p class="mina-chat-message">I can help hiring teams and partners understand where Mina's clinical, operational, business, and technology perspective may be useful. Ask about fit, strengths, or how he approaches a problem.</p></div>
+    <div class="mina-chat-options" aria-label="Suggested questions"><button type="button" data-question="Would Mina fit our healthcare team?">Team fit</button><button type="button" data-question="What can Mina contribute to a project?">Project contribution</button><button type="button" data-question="How does Mina approach a problem?">Working approach</button></div>
+    <form class="mina-chat-form" id="minaChatForm"><label class="sr-only" for="minaChatInput">Ask Mina AI a question</label><input id="minaChatInput" autocomplete="off" placeholder="Ask about collaboration..." /><button type="submit" aria-label="Send question">Send</button></form>
+    <a class="mina-chat-contact" href="mailto:minagayid@gmail.com?subject=Potential%20collaboration%20with%20Mina%20Gayid&body=Hello%20Mina%2C%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20role%20or%20collaboration.%0A%0AOrganization%2Fproject%3A%0AContext%3A%0ANext%20step%3A">Start a focused conversation →</a></div>
+</aside>
 </body>
 </html>
