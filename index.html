@@ -1,285 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mina Maged Zekry Gayid — Dentist · Clinic Owner · MBA Candidate</title>
-<meta name="description" content="Mina Maged Zekry Gayid — Dentist and dental clinic owner in Aswan, Egypt, MBA candidate blending patient care, healthcare management, and data-driven technology.">
-<meta name="author" content="Mina Maged Zekry Gayid">
-<meta property="og:title" content="Mina Maged Zekry Gayid — Portfolio">
-<meta property="og:description" content="Dentist · Dental Clinic Owner · MBA Candidate — Aswan, Egypt.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#0f2a43; --navy-2:#16395c; --teal:#12a3a3; --teal-d:#0c7c7c;
-  --ink:#1c2b39; --muted:#5b6b7a; --line:#e3e9ef; --bg:#f6f9fb; --card:#ffffff;
-  --shadow:0 10px 30px -12px rgba(15,42,67,.18);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;letter-spacing:-.01em}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mina Maged Zekry Gayid | Applied AI, Healthcare & Dentistry</title>
+  <meta name="description" content="Portfolio of Mina Maged Zekry Gayid: applied AI intern, dentist, clinic owner, and healthcare MBA candidate in Aswan, Egypt.">
+  <meta name="author" content="Mina Maged Zekry Gayid">
+  <meta name="theme-color" content="#102a43">
+  <meta property="og:title" content="Mina Maged Zekry Gayid | Applied AI, Healthcare & Dentistry">
+  <meta property="og:description" content="A healthcare professional building practical bridges between clinical care, operations, data, and AI.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-2: #1b4965;
+      --teal: #18a6a6;
+      --teal-dark: #0a7476;
+      --ink: #193042;
+      --muted: #5d7181;
+      --line: #dce7ee;
+      --mist: #f4f8fa;
+      --paper: #ffffff;
+      --soft-teal: #e9f7f5;
+      --shadow: 0 18px 44px -22px rgba(16, 42, 67, .28);
+    }
 
-/* Nav */
-header.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(10px);background:rgba(246,249,251,.82);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
-.brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--navy)}
-.brand span{color:var(--teal)}
-.nav-links{display:flex;gap:26px;font-size:.92rem;font-weight:500;color:var(--muted)}
-.nav-links a:hover{color:var(--teal)}
-@media(max-width:680px){.nav-links{display:none}}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--mist);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+    h1, h2, h3, .brand, .serif { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-/* Hero */
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#0c5a5a 130%);color:#fff}
-.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;background:radial-gradient(circle,rgba(18,163,163,.45),transparent 62%);pointer-events:none}
-.hero-in{display:flex;align-items:center;gap:52px;padding:74px 0 82px}
-.hero-text{flex:1;min-width:0}
-.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#8fe6e6;font-weight:600;margin-bottom:16px}
-.hero h1{font-size:clamp(2.1rem,5vw,3.35rem);line-height:1.05;font-weight:600;margin-bottom:14px}
-.hero .role{font-size:1.15rem;color:#d7e5f0;font-weight:500}
-.hero .loc{margin-top:6px;color:#9fb6c8;font-size:.98rem}
-.hero p.lede{margin-top:22px;max-width:33rem;color:#cfe0ec;font-size:1.02rem}
-.hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.92rem;transition:.2s}
-.btn-primary{background:var(--teal);color:#03252a}
-.btn-primary:hover{background:#25c2c2;transform:translateY(-2px)}
-.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
-.btn-ghost:hover{border-color:var(--teal);color:#8fe6e6}
-.avatar-wrap{flex-shrink:0}
-.avatar{width:230px;height:230px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.14);box-shadow:0 22px 50px -18px rgba(0,0,0,.55)}
-@media(max-width:760px){.hero-in{flex-direction:column-reverse;text-align:center;gap:30px;padding:54px 0 60px}.hero-cta{justify-content:center}.hero p.lede{margin-left:auto;margin-right:auto}.avatar{width:180px;height:180px}}
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 248, 250, .88);
+      border-bottom: 1px solid rgba(220, 231, 238, .9);
+      backdrop-filter: blur(14px);
+    }
+    .nav-in { display: flex; align-items: center; justify-content: space-between; min-height: 66px; }
+    .brand { color: var(--navy); font-size: 1.15rem; }
+    .brand span { color: var(--teal); }
+    .nav-links { display: flex; gap: 26px; color: var(--muted); font-size: .88rem; font-weight: 600; }
+    .nav-links a:hover { color: var(--teal-dark); }
 
-/* Sections */
-section.block{padding:70px 0}
-.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:34px}
-.sec-head .num{font-family:'Fraunces',serif;color:var(--teal);font-size:1rem;font-weight:600}
-.sec-head h2{font-size:1.7rem;color:var(--navy);font-weight:600}
-.sec-head .rule{flex:1;height:1px;background:var(--line)}
-.lead{font-size:1.06rem;color:var(--muted);max-width:46rem}
-.lead strong{color:var(--ink);font-weight:600}
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy) 0%, #153e5b 64%, #0b6e70 140%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -180px;
+      top: -210px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(70, 224, 210, .32), transparent 68%);
+    }
+    .hero-in { position: relative; display: flex; align-items: center; gap: 64px; padding: 84px 0 92px; }
+    .hero-copy { flex: 1; min-width: 0; }
+    .eyebrow { display: inline-block; margin-bottom: 16px; color: #8fe6df; font-size: .76rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .hero h1 { max-width: 720px; font-size: clamp(3rem, 7vw, 5.5rem); line-height: .98; letter-spacing: -.025em; }
+    .hero-role { margin-top: 20px; color: #e3eff4; font-size: 1.12rem; font-weight: 600; }
+    .hero-loc { margin-top: 5px; color: #a8c3d2; font-size: .95rem; }
+    .hero-lede { max-width: 620px; margin-top: 23px; color: #cfe0e9; font-size: 1.04rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 19px; border-radius: 999px; font-size: .9rem; font-weight: 700; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #062c32; background: #57d9ce; }
+    .button-primary:hover { background: #83e8dd; }
+    .button-ghost { color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .button-ghost:hover { border-color: #8fe6df; color: #8fe6df; }
+    .hero-card { flex: 0 0 270px; padding: 26px; border: 1px solid rgba(255,255,255,.18); border-radius: 24px; background: rgba(255,255,255,.08); box-shadow: 0 20px 54px -26px rgba(0,0,0,.5); }
+    .avatar { width: 210px; height: 210px; margin: 0 auto 22px; border: 5px solid rgba(255,255,255,.18); border-radius: 50%; object-fit: cover; }
+    .hero-card p { color: #d5e9ee; font-size: .9rem; }
+    .hero-card strong { display: block; margin-bottom: 4px; color: #fff; font-size: 1.05rem; }
 
-/* Timeline */
-.tl{display:grid;gap:20px}
-.tl-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);transition:.2s}
-.tl-item:hover{transform:translateY(-3px);border-color:#cfe6e6}
-.tl-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
-.tl-role{font-weight:700;color:var(--navy);font-size:1.06rem}
-.tl-org{color:var(--teal-d);font-weight:600}
-.tl-date{font-size:.85rem;color:var(--muted);white-space:nowrap;background:#eef5f5;padding:3px 12px;border-radius:999px;font-weight:600}
-.tl-desc{margin-top:8px;color:var(--muted);font-size:.97rem}
+    section.block { padding: 78px 0 0; }
+    .section-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+    .section-number { color: var(--teal-dark); font-size: .84rem; font-weight: 700; letter-spacing: .12em; }
+    .section-heading h2 { color: var(--navy); font-size: 2rem; }
+    .section-rule { flex: 1; height: 1px; background: var(--line); }
+    .lead { max-width: 800px; color: var(--muted); font-size: 1.06rem; }
+    .lead strong { color: var(--ink); }
+    .story-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 22px; }
+    .story-card { padding: 27px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--shadow); }
+    .story-card h3 { margin-bottom: 9px; color: var(--navy); font-size: 1.45rem; }
+    .story-card p { color: var(--muted); font-size: .96rem; }
+    .fact-list { display: grid; gap: 13px; list-style: none; }
+    .fact-list li { display: flex; gap: 10px; color: var(--muted); font-size: .92rem; }
+    .fact-list li::before { content: ""; width: 8px; height: 8px; flex: 0 0 8px; margin-top: 9px; border-radius: 50%; background: var(--teal); }
 
-/* Grid cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
-.card h3{font-size:1.05rem;color:var(--navy);margin-bottom:6px;font-weight:600}
-.card .sub{color:var(--teal-d);font-weight:600;font-size:.9rem}
-.card .meta{color:var(--muted);font-size:.88rem;margin-top:4px}
+    .timeline { display: grid; gap: 16px; }
+    .timeline-item { padding: 24px 26px; border: 1px solid var(--line); border-radius: 17px; background: var(--paper); box-shadow: var(--shadow); }
+    .timeline-top { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .timeline-role { color: var(--navy); font-size: 1.14rem; font-weight: 700; }
+    .timeline-org { color: var(--teal-dark); font-weight: 700; }
+    .timeline-date { padding: 4px 11px; border-radius: 999px; color: var(--teal-dark); background: var(--soft-teal); font-size: .82rem; font-weight: 700; white-space: nowrap; }
+    .timeline-item p { margin-top: 8px; color: var(--muted); font-size: .94rem; }
+    .bullet-list { display: grid; gap: 5px; margin-top: 11px; padding-left: 19px; color: var(--muted); font-size: .92rem; }
 
-/* Certs */
-.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.cert{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-.cert .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);margin-top:8px;flex-shrink:0}
-.cert b{color:var(--navy);font-weight:600;font-size:.97rem}
-.cert small{display:block;color:var(--muted);margin-top:2px}
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 16px; }
+    .card { padding: 23px; border: 1px solid var(--line); border-radius: 17px; background: var(--paper); box-shadow: var(--shadow); }
+    .card h3 { color: var(--navy); font-size: 1.25rem; }
+    .card .card-sub { margin-top: 6px; color: var(--teal-dark); font-weight: 700; font-size: .9rem; }
+    .card .card-meta { margin-top: 4px; color: var(--muted); font-size: .86rem; }
+    .project-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
+    .project-label { display: inline-block; margin-bottom: 8px; color: var(--teal-dark); font-size: .76rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .project-badge { padding: 13px 16px; border-radius: 14px; color: var(--navy); background: var(--soft-teal); font-size: .8rem; font-weight: 700; text-align: center; }
+    .project-badge span { display: block; color: var(--teal-dark); font-family: "DM Serif Display", Georgia, serif; font-size: 2.1rem; line-height: 1; }
 
-/* Skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.skillcol{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
-.skillcol h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-d);margin-bottom:14px}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{background:#eef5f5;color:var(--navy);font-size:.85rem;font-weight:500;padding:6px 13px;border-radius:999px;border:1px solid #dcecec}
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+    .skill-card { padding: 22px; border: 1px solid var(--line); border-radius: 17px; background: var(--paper); box-shadow: var(--shadow); }
+    .skill-card h3 { margin-bottom: 13px; color: var(--teal-dark); font-family: Inter, sans-serif; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 6px 11px; border: 1px solid #d5ebe8; border-radius: 999px; color: var(--navy); background: #f1faf9; font-size: .82rem; font-weight: 600; }
 
-/* Currently */
-.now{background:linear-gradient(135deg,#0f2a43,#0c5a5a);color:#fff;border-radius:20px;padding:36px 34px}
-.now h2{color:#fff;font-size:1.5rem;margin-bottom:16px}
-.now ul{list-style:none;display:grid;gap:12px}
-.now li{display:flex;gap:12px;color:#d7ebeb;font-size:1rem}
-.now li::before{content:"→";color:#8fe6e6;font-weight:700}
+    .now { padding: 34px; border-radius: 22px; color: #fff; background: linear-gradient(135deg, var(--navy), #0c7272); box-shadow: 0 20px 50px -24px rgba(16,42,67,.5); }
+    .now h2 { margin-bottom: 16px; color: #fff; font-size: 1.8rem; }
+    .now-list { display: grid; gap: 10px; list-style: none; }
+    .now-list li { display: flex; gap: 10px; color: #d8edef; font-size: .96rem; }
+    .now-list li::before { content: "->"; color: #88e2d8; font-weight: 700; }
 
-/* Contact */
-.contact{text-align:center;padding:72px 0 40px}
-.contact h2{font-size:2rem;color:var(--navy);margin-bottom:10px}
-.contact p{color:var(--muted);margin-bottom:26px}
-.links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.link{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:.93rem;color:var(--navy);transition:.2s}
-.link:hover{border-color:var(--teal);color:var(--teal-d);transform:translateY(-2px);box-shadow:var(--shadow)}
-footer{text-align:center;padding:30px 0 40px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+    .contact { padding: 82px 0 42px; text-align: center; }
+    .contact h2 { color: var(--navy); font-size: 2.35rem; }
+    .contact p { margin-top: 8px; color: var(--muted); }
+    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+    .contact-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 17px; border: 1px solid var(--line); border-radius: 999px; color: var(--navy); background: var(--paper); font-size: .88rem; font-weight: 700; transition: transform .2s ease, border-color .2s ease, color .2s ease; }
+    .contact-link:hover { transform: translateY(-2px); border-color: var(--teal); color: var(--teal-dark); }
+    footer { padding: 27px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; text-align: center; }
 
-/* Mina portfolio assistant */
-.mina-assistant-toggle{position:fixed;right:22px;bottom:22px;z-index:80;border:0;border-radius:999px;background:var(--navy);color:#fff;box-shadow:0 16px 34px rgba(15,42,67,.28);padding:12px 16px;display:inline-flex;gap:9px;align-items:center;font:600 .88rem 'Inter',sans-serif;cursor:pointer}
-.mina-assistant-toggle::before{content:"";width:9px;height:9px;border-radius:50%;background:#75ded7;box-shadow:0 0 0 4px rgba(117,222,215,.18)}
-.mina-assistant-toggle span{color:#9be8e3;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.mina-chat{position:fixed;right:22px;bottom:78px;z-index:81;width:min(390px,calc(100vw - 34px));border:1px solid #d8e4eb;border-radius:18px;background:#fff;box-shadow:0 24px 64px rgba(15,42,67,.24);overflow:hidden}.mina-chat[hidden]{display:none}
-.mina-chat-head{display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;padding:17px 18px}.mina-chat-mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#07333a;font-family:'Fraunces',serif;font-weight:600}.mina-chat-head strong{display:block;font-size:.96rem}.mina-chat-head small{display:block;margin-top:1px;color:#b8d4e2;font-size:.75rem}.mina-chat-close{margin-left:auto;border:0;background:transparent;color:#dcecf4;font-size:1.35rem;line-height:1;cursor:pointer;padding:4px}
-.mina-chat-body{max-height:430px;overflow:auto;padding:16px;background:#f8fbfc}.mina-chat-message{margin:0 0 11px;padding:11px 13px;border-radius:12px;background:#e7f3f2;color:#24434d;font-size:.88rem;line-height:1.55}.mina-chat-message.user{margin-left:32px;background:#e7eef5;color:#18344d}.mina-chat-options{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}.mina-chat-options button{border:1px solid #b8d9d7;background:#fff;color:var(--teal-d);border-radius:999px;padding:7px 10px;font:600 .75rem 'Inter',sans-serif;cursor:pointer}.mina-chat-options button:hover{background:#e8f7f6}
-.mina-chat-form{display:flex;gap:7px;padding-top:4px}.mina-chat-form input{min-width:0;flex:1;border:1px solid #cddbe3;border-radius:9px;padding:10px 11px;font:400 .85rem 'Inter',sans-serif;color:var(--ink)}.mina-chat-form button{border:0;border-radius:9px;background:var(--teal);color:#07333a;padding:0 13px;font-weight:700;cursor:pointer}.mina-chat-contact{display:block;margin-top:13px;border-top:1px solid #dbe7ec;padding-top:12px;color:var(--navy);font-size:.82rem;font-weight:700}.mina-chat-contact:hover{color:var(--teal-d)}
-@media(max-width:560px){.mina-assistant-toggle{right:14px;bottom:14px}.mina-chat{right:14px;bottom:70px}.mina-chat-body{max-height:58vh}}
-/* reveal */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-.mina-chat-head #minaModelStatus{color:#b8d4e2}.mina-chat-contact{width:100%;border-left:0;border-right:0;border-bottom:0;background:transparent;text-align:left;cursor:pointer}.mina-lead-form{display:grid;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid #dbe7ec}.mina-lead-form p,.mina-lead-form label{font-size:.75rem;line-height:1.45;color:#55717c}.mina-lead-form input:not([type=checkbox]),.mina-lead-form textarea{width:100%;border:1px solid #cddbe3;border-radius:8px;padding:9px;font:400 .82rem 'Inter',sans-serif}.mina-lead-form textarea{min-height:72px;resize:vertical}.mina-lead-form button{border:0;border-radius:8px;background:var(--teal);color:#07333a;padding:10px;font-weight:700;cursor:pointer}</style>
+    .assistant-toggle { position: fixed; right: 22px; bottom: 22px; z-index: 50; display: inline-flex; align-items: center; gap: 9px; padding: 13px 17px; border: 0; border-radius: 999px; color: #fff; background: var(--navy); box-shadow: 0 18px 38px rgba(16,42,67,.28); font: 700 .86rem Inter, sans-serif; cursor: pointer; }
+    .assistant-toggle::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #73e0d4; box-shadow: 0 0 0 4px rgba(115,224,212,.18); }
+    .assistant-toggle span { color: #9be8e0; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; }
+    .chat { position: fixed; right: 22px; bottom: 78px; z-index: 51; width: min(400px, calc(100vw - 34px)); overflow: hidden; border: 1px solid #d5e3ea; border-radius: 18px; background: var(--paper); box-shadow: 0 24px 70px rgba(16,42,67,.25); }
+    .chat[hidden] { display: none; }
+    .chat-head { display: flex; align-items: center; gap: 11px; padding: 16px 18px; color: #fff; background: linear-gradient(135deg, var(--navy), var(--navy-2)); }
+    .chat-mark { display: grid; width: 35px; height: 35px; place-items: center; border-radius: 50%; color: #07333a; background: #57d9ce; font-family: "DM Serif Display", Georgia, serif; font-size: 1.18rem; }
+    .chat-head strong { display: block; font-size: .95rem; }
+    .chat-head small { display: block; margin-top: 1px; color: #b8d4e2; font-size: .72rem; }
+    .chat-close { margin-left: auto; padding: 4px; border: 0; color: #dcecf4; background: transparent; font-size: 1.35rem; line-height: 1; cursor: pointer; }
+    #modelStatus { color: #a6eee7; }
+    .chat-body { max-height: 460px; overflow: auto; padding: 15px; background: #f7fbfc; }
+    .chat-message { margin: 0 0 10px; padding: 11px 13px; border-radius: 12px; color: #24434d; background: #e8f5f3; font-size: .86rem; line-height: 1.55; white-space: pre-wrap; }
+    .chat-message.user { margin-left: 32px; color: #18344d; background: #e7eef5; }
+    .chat-options { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0; }
+    .chat-options button { padding: 7px 10px; border: 1px solid #b8d9d7; border-radius: 999px; color: var(--teal-dark); background: #fff; font: 700 .73rem Inter, sans-serif; cursor: pointer; }
+    .chat-options button:hover { background: #e8f7f6; }
+    .chat-form { display: flex; gap: 7px; padding-top: 2px; }
+    .chat-form input { min-width: 0; flex: 1; padding: 10px 11px; border: 1px solid #cddbe3; border-radius: 9px; color: var(--ink); font: .84rem Inter, sans-serif; }
+    .chat-form button, .lead-form button { padding: 0 13px; border: 0; border-radius: 9px; color: #07333a; background: var(--teal); font: 700 .82rem Inter, sans-serif; cursor: pointer; }
+    .chat-contact { width: 100%; margin-top: 12px; padding: 12px 0 0; border: 0; border-top: 1px solid #dbe7ec; color: var(--navy); background: transparent; font: 700 .8rem Inter, sans-serif; text-align: left; cursor: pointer; }
+    .chat-contact:hover { color: var(--teal-dark); }
+    .lead-form { display: grid; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #dbe7ec; }
+    .lead-form p, .lead-form label { color: #55717c; font-size: .73rem; line-height: 1.45; }
+    .lead-form input:not([type="checkbox"]), .lead-form textarea { width: 100%; padding: 9px; border: 1px solid #cddbe3; border-radius: 8px; color: var(--ink); font: .8rem Inter, sans-serif; }
+    .lead-form textarea { min-height: 72px; resize: vertical; }
+    .lead-form button { min-height: 38px; }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
+    @media (max-width: 800px) { .hero-in { flex-direction: column-reverse; align-items: flex-start; gap: 34px; padding: 63px 0 72px; } .hero-card { width: 100%; max-width: 340px; } .story-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 620px) { .wrap { width: min(100% - 32px, 1120px); } .nav-links { display: none; } .hero-in { align-items: stretch; } .hero-card { margin: 0 auto; text-align: center; } .hero h1 { font-size: clamp(2.9rem, 15vw, 4.4rem); } section.block { padding-top: 58px; } .project-card { grid-template-columns: 1fr; } .project-badge { width: max-content; } .assistant-toggle { right: 14px; bottom: 14px; } .chat { right: 14px; bottom: 70px; } }
+  </style>
 </head>
 <body>
-
-<header class="nav">
-  <div class="wrap nav-in">
-    <div class="brand">Mina<span>.</span>Gayid</div>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="wrap hero-in">
-    <div class="hero-text">
-      <span class="eyebrow">Dentist · Healthcare · Technology</span>
-      <h1>Mina Maged<br>Zekry Gayid</h1>
-      <div class="role">Dentist · Dental Clinic Owner · MBA Candidate</div>
-      <div class="loc">Aswan, Egypt</div>
-      <p class="lede">Combining quality patient care with sound operations — and exploring how data and technology can improve healthcare delivery.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="mailto:minagayid@gmail.com">Get in touch</a>
-        <a class="btn btn-ghost" href="#experience">View experience</a>
-      </div>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="Mina Gayid home">Mina<span>.</span>Gayid</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">AI work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="avatar-wrap">
-      <img class="avatar" src="https://raw.githubusercontent.com/minagayid/minagayid/main/assets/mina-headshot-suit.jpg" alt="Mina Maged Zekry Gayid">
-    </div>
-  </div>
-</section>
+  </header>
 
-<main class="wrap">
-
-  <section class="block reveal" id="about">
-    <div class="sec-head"><span class="num">01</span><h2>About</h2><span class="rule"></span></div>
-    <p class="lead">I'm a practicing <strong>dentist and dental clinic owner</strong> based in Aswan, Egypt, graduated with the <strong>highest honors</strong> from MSA University's Faculty of Dentistry. Alongside clinical practice, I'm expanding into <strong>healthcare management and business</strong>, currently pursuing an MBA at the Arab Academy for Science, Technology &amp; Maritime Transport. Running a clinic taught me as much about people, systems, and decision-making as dentistry did — and I'm increasingly interested in how data and technology can improve healthcare delivery.</p>
-  </section>
-
-  <section class="block reveal" id="experience">
-    <div class="sec-head"><span class="num">02</span><h2>Experience</h2><span class="rule"></span></div>
-    <div class="tl">
-      <div class="tl-item">
-        <div class="tl-top">
-          <div><span class="tl-role">Owner &amp; Operator</span> · <span class="tl-org">Happy Dental Clinic</span></div>
-          <span class="tl-date">2023 – Present</span>
+  <div id="top" class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <span class="eyebrow">Applied AI · Healthcare · Dentistry</span>
+        <h1>Mina Maged<br>Zekry Gayid</h1>
+        <p class="hero-role">Applied AI Intern · Dentist (BDS) · Healthcare MBA Candidate</p>
+        <p class="hero-loc">Aswan, Egypt</p>
+        <p class="hero-lede">I bring clinical judgment, clinic operations experience, and practical AI fluency to healthcare and business problems that deserve a thoughtful, useful solution.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:minagayid@gmail.com">Start a conversation</a>
+          <a class="button button-ghost" href="#experience">Explore experience</a>
         </div>
-        <p class="tl-desc">Founded and run a private dental practice — clinical care, staff, scheduling, and day-to-day operations.</p>
       </div>
-      <div class="tl-item">
-        <div class="tl-top">
-          <div><span class="tl-role">Dentist, Elgozayra Family Medicine Unit</span> · <span class="tl-org">Egypt Healthcare Authority</span></div>
-          <span class="tl-date">2022 – 2024</span>
-        </div>
-        <p class="tl-desc">Delivered primary dental care within Egypt's public family-medicine system.</p>
+      <aside class="hero-card" aria-label="Mina's current focus">
+        <img class="avatar" src="https://raw.githubusercontent.com/minagayid/minagayid/main/assets/mina-headshot-suit.jpg" alt="Mina Maged Zekry Gayid">
+        <p><strong>Current focus</strong>Applied AI workflows, healthcare management, and responsible technology adoption.</p>
+      </aside>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="block reveal" id="about">
+      <div class="section-heading"><span class="section-number">01</span><h2>About</h2><span class="section-rule"></span></div>
+      <div class="story-grid">
+        <article class="story-card">
+          <h3>A practical bridge between care and technology.</h3>
+          <p>I am a practicing dentist and dental clinic owner based in Aswan, Egypt, with a BDS from Modern Sciences and Arts University and an MBA in Hospital and Healthcare Facilities Administration in progress. Alongside clinical and operational work, I am building hands-on fluency in Claude, prompt engineering, generative AI, data analysis, and AI-assisted workflows.</p>
+        </article>
+        <article class="story-card">
+          <ul class="fact-list">
+            <li>Patient-centered clinical care and public primary-care experience</li>
+            <li>Owner-operator perspective on clinic workflows and service delivery</li>
+            <li>Responsible AI mindset: capabilities, limitations, and human review</li>
+            <li>Arabic speaker with English proficiency at C1 level</li>
+          </ul>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block reveal" id="education">
-    <div class="sec-head"><span class="num">03</span><h2>Education</h2><span class="rule"></span></div>
-    <div class="grid">
-      <div class="card">
-        <h3>Master of Business Administration</h3>
-        <div class="sub">Arab Academy for Science, Technology &amp; Maritime Transport</div>
-        <div class="meta">2025 – Present</div>
+    <section class="block reveal" id="experience">
+      <div class="section-heading"><span class="section-number">02</span><h2>Experience</h2><span class="section-rule"></span></div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-top"><div><span class="timeline-role">AI Intern</span> · <span class="timeline-org">FlyRank AI</span></div><span class="timeline-date">Jun 2026 · Present</span></div>
+          <ul class="bullet-list"><li>Apply AI tools and prompt-engineering workflows to practical business use cases in an AI-powered organic-growth environment.</li><li>Build fluency with Claude, AI automation, research and file workflows, and responsible model use.</li><li>Bring clinical and healthcare-management context to technology-first problem solving in a remote startup setting.</li></ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-top"><div><span class="timeline-role">Owner and Dentist</span> · <span class="timeline-org">Happy Dental Clinic</span></div><span class="timeline-date">2023 · Present</span></div>
+          <ul class="bullet-list"><li>Own and operate a dental clinic, combining patient-centered care with day-to-day business and service delivery.</li><li>Coordinate clinic operations, time-sensitive workflows, patient communication, and care delivery through structured problem solving.</li></ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-top"><div><span class="timeline-role">Dentist</span> · <span class="timeline-org">Egypt Healthcare Authority, El Gozayra Family Medicine Unit</span></div><span class="timeline-date">2022 · 2024</span></div>
+          <ul class="bullet-list"><li>Delivered dental care in a public primary-care setting and collaborated with multidisciplinary healthcare teams.</li><li>Maintained patient-focused communication, organized clinical workflows, and consistent service standards.</li></ul>
+        </article>
       </div>
-      <div class="card">
-        <h3>Bachelor of Dentistry</h3>
-        <div class="sub">MSA University</div>
-        <div class="meta">2015 – 2020 · GPA 3.72 · Graduated with Highest Honors</div>
+    </section>
+
+    <section class="block reveal" id="work">
+      <div class="section-heading"><span class="section-number">03</span><h2>Selected AI work</h2><span class="section-rule"></span></div>
+      <article class="card project-card">
+        <div><span class="project-label">Applied AI and Claude Workflow Portfolio</span><h3>Turning model capabilities into practical, reviewable workflows.</h3><p class="card-meta">FlyRank AI internship / Anthropic Academy · Jul 2026</p><ul class="bullet-list"><li>Completed hands-on exercises covering Claude API use, prompt engineering, research and file workflows, model limitations, and human-in-the-loop review.</li><li>Structured healthcare and business scenarios into reusable prompt-driven workflows and evaluated outputs for relevance, limitations, and responsible use.</li></ul></div>
+        <div class="project-badge"><span>7</span>Anthropic Academy<br>credentials</div>
+      </article>
+    </section>
+
+    <section class="block reveal" id="education">
+      <div class="section-heading"><span class="section-number">04</span><h2>Education & credentials</h2><span class="section-rule"></span></div>
+      <div class="cards">
+        <article class="card"><h3>Master of Business Administration</h3><p class="card-sub">Arab Academy for Science, Technology and Maritime Transport</p><p class="card-meta">Apr 2025 · Mar 2027 expected<br>Hospital and Healthcare Facilities Administration / Management</p></article>
+        <article class="card"><h3>Bachelor of Dentistry (BDS)</h3><p class="card-sub">Modern Sciences and Arts University</p><p class="card-meta">2015 · 2020 · GPA 3.72<br>Highest Honors</p></article>
+        <article class="card"><h3>Selected certifications</h3><p class="card-sub">Anthropic Academy · Jul 2026</p><p class="card-meta">Building with the Claude API, AI Fluency for Builders, Claude 101, AI Capabilities and Limitations, Introduction to Claude Cowork, AI Fluency Framework &amp; Foundations</p></article>
+        <article class="card"><h3>Additional training</h3><p class="card-sub">Project Management Institute · Cisco Networking Academy</p><p class="card-meta">Generative AI Overview for Project Managers · Data Analytics</p></article>
       </div>
+    </section>
+
+    <section class="block reveal" id="skills">
+      <div class="section-heading"><span class="section-number">05</span><h2>Skills</h2><span class="section-rule"></span></div>
+      <div class="skills">
+        <article class="skill-card"><h3>AI &amp; ML</h3><div class="tags"><span class="tag">Claude API</span><span class="tag">Prompt engineering</span><span class="tag">Generative AI</span><span class="tag">AI workflow design</span><span class="tag">Responsible AI</span><span class="tag">Model limitations</span><span class="tag">Foundational ML</span></div></article>
+        <article class="skill-card"><h3>Programming &amp; data</h3><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Excel</span></div></article>
+        <article class="skill-card"><h3>Cloud &amp; productivity</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Microsoft Word</span><span class="tag">PowerPoint</span><span class="tag">Teams</span></div></article>
+        <article class="skill-card"><h3>Healthcare &amp; business</h3><div class="tags"><span class="tag">Clinical dentistry</span><span class="tag">Healthcare management</span><span class="tag">Hospital administration</span><span class="tag">Clinic operations</span><span class="tag">Project management</span><span class="tag">Research</span></div></article>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="now">
+        <h2>Currently</h2>
+        <ul class="now-list"><li>Growing Happy Dental Clinic while studying toward an MBA.</li><li>Building practical skills in AI-assisted workflows, data analysis, and programming.</li><li>Open to collaboration at the intersection of healthcare, business, and technology.</li></ul>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+      <h2>Let's build something useful.</h2>
+      <p>Open to thoughtful conversations about healthcare, business, and applied AI.</p>
+      <div class="contact-links"><a class="contact-link" href="mailto:minagayid@gmail.com">minagayid@gmail.com</a><a class="contact-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid-6b5b3a137" target="_blank" rel="noopener">LinkedIn</a><a class="contact-link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a></div>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year"></span> Mina Maged Zekry Gayid · Aswan, Egypt</footer>
+
+  <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistant"><span>GPT-OSS 20B</span> Ask Mina</button>
+  <aside class="chat" id="assistant" hidden role="dialog" aria-label="Mina AI portfolio guide">
+    <div class="chat-head"><div class="chat-mark">M</div><div><strong>Mina AI</strong><small>Grounded portfolio guide</small><small id="modelStatus">Fast hosted GPT-OSS 20B · ready</small></div><button class="chat-close" id="assistantClose" type="button" aria-label="Close assistant">&times;</button></div>
+    <div class="chat-body">
+      <div id="chatTranscript" aria-live="polite"><p class="chat-message">I can help you understand Mina's experience, skills, AI work, and potential fit for a team or project. Ask me anything about the portfolio.</p></div>
+      <div class="chat-options" aria-label="Suggested questions"><button type="button" data-question="Would Mina fit our healthcare team?">Team fit</button><button type="button" data-question="What can Mina contribute to an AI project?">Project contribution</button><button type="button" data-question="How does Mina approach a problem?">Working approach</button><button type="button" data-question="What are Mina's AI skills?">AI skills</button></div>
+      <form class="chat-form" id="chatForm"><label class="sr-only" for="chatInput">Ask Mina AI a question</label><input id="chatInput" autocomplete="off" placeholder="Ask about collaboration..."><button type="submit">Send</button></form>
+      <button class="chat-contact" id="leadToggle" type="button">Send a collaboration brief -&gt;</button>
+      <form class="lead-form" id="leadForm" hidden><p>Nothing is sent automatically. Share only what you choose, then review the email before sending.</p><input id="leadName" placeholder="Your name (optional)"><input id="leadEmail" type="email" placeholder="Your email (optional)"><input id="leadOrg" placeholder="Company or organisation (optional)"><textarea id="leadMessage" required placeholder="Role, project, or collaboration need"></textarea><label><input id="leadConsent" type="checkbox"> I consent to sending this brief to Mina by email.</label><button type="submit">Open my email to send</button></form>
     </div>
-  </section>
+  </aside>
 
-  <section class="block reveal" id="certs">
-    <div class="sec-head"><span class="num">04</span><h2>Certifications</h2><span class="rule"></span></div>
-    <div class="certs">
-      <div class="cert"><span class="dot"></span><div><b>Basic Implant Course</b><small>Cairo Dental Syndicate · 2021</small></div></div>
-      <div class="cert"><span class="dot"></span><div><b>Basic Life Support (BLS)</b><small>Egypt Healthcare Authority · 2023</small></div></div>
-      <div class="cert"><span class="dot"></span><div><b>ICDL — Intl. Computer Driving Licence</b><small>Cairo University · 2021</small></div></div>
-      <div class="cert"><span class="dot"></span><div><b>Mini MBA</b><small>Udemy · 2020</small></div></div>
-    </div>
-  </section>
+  <script src="https://js.puter.com/v2/"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  <section class="block reveal" id="skills">
-    <div class="sec-head"><span class="num">05</span><h2>Skills</h2><span class="rule"></span></div>
-    <div class="skills">
-      <div class="skillcol"><h3>Clinical &amp; Professional</h3><div class="tags"><span class="tag">Dentistry</span><span class="tag">Dental Implants</span><span class="tag">Patient Care</span><span class="tag">Clinic Management</span><span class="tag">Operations</span></div></div>
-      <div class="skillcol"><h3>Business &amp; Analytics</h3><div class="tags"><span class="tag">Business Administration</span><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">Tableau</span><span class="tag">MS Office</span></div></div>
-      <div class="skillcol"><h3>Technical (foundational)</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">AWS</span><span class="tag">Azure</span></div></div>
-      <div class="skillcol"><h3>Languages</h3><div class="tags"><span class="tag">Arabic (native)</span><span class="tag">English (C1)</span></div></div>
-      <div class="skillcol"><h3>Strengths</h3><div class="tags"><span class="tag">Communication</span><span class="tag">Teamwork</span><span class="tag">Organization</span><span class="tag">Problem-Solving</span><span class="tag">Analytical Thinking</span></div></div>
-    </div>
-  </section>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-  <section class="block reveal">
-    <div class="now">
-      <h2>Currently</h2>
-      <ul>
-        <li>Studying toward my MBA while growing Happy Dental Clinic</li>
-        <li>Building practical skills in data analysis and programming</li>
-        <li>Open to collaboration at the intersection of healthcare, business, and technology</li>
-      </ul>
-    </div>
-  </section>
+    const assistantToggle = document.getElementById("assistantToggle");
+    const assistant = document.getElementById("assistant");
+    const assistantClose = document.getElementById("assistantClose");
+    const chatForm = document.getElementById("chatForm");
+    const chatInput = document.getElementById("chatInput");
+    const transcript = document.getElementById("chatTranscript");
+    const modelStatus = document.getElementById("modelStatus");
+    const leadForm = document.getElementById("leadForm");
+    const leadToggle = document.getElementById("leadToggle");
+    const modelName = "openai/gpt-oss-20b";
+    const systemPrompt = "You are Mina AI, a concise and accurate portfolio guide for Mina Maged Zekry Gayid. Use only these facts: Mina is an Applied AI Intern at FlyRank AI from June 2026, a dentist and owner of Happy Dental Clinic in Aswan, a former dentist at Egypt Healthcare Authority's El Gozayra Family Medicine Unit, and an MBA candidate in Hospital and Healthcare Facilities Administration. His AI work includes Claude API training, prompt engineering, generative AI, AI workflow design, research and file workflows, responsible AI, and model capabilities and limitations. His working-knowledge data and programming skills include Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel, with familiarity with AWS, Azure, Word, PowerPoint, and Teams. He earned seven Anthropic Academy credentials and has a BDS from Modern Sciences and Arts University with GPA 3.72 and Highest Honors. Do not invent employers, outcomes, credentials, availability, or clinical claims. Do not give medical, dental, legal, or financial advice. Keep answers brief and practical, and suggest a collaboration question when useful.";
 
-  <section class="contact reveal" id="contact">
-    <h2>Get in touch</h2>
-    <p>Open to collaboration where healthcare, business, and technology meet.</p>
-    <div class="links">
-      <a class="link" href="mailto:minagayid@gmail.com">✉ minagayid@gmail.com</a>
-      <a class="link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid-6b5b3a137" target="_blank" rel="noopener">in LinkedIn</a>
-      <a class="link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
+    function setAssistantOpen(open) {
+      assistant.hidden = !open;
+      assistantToggle.setAttribute("aria-expanded", String(open));
+      if (open) chatInput.focus();
+    }
+    assistantToggle.addEventListener("click", () => setAssistantOpen(assistant.hidden));
+    assistantClose.addEventListener("click", () => setAssistantOpen(false));
 
-</main>
+    function addMessage(text, kind) {
+      const message = document.createElement("p");
+      message.className = "chat-message" + (kind === "user" ? " user" : "");
+      message.textContent = text;
+      transcript.appendChild(message);
+      transcript.parentElement.scrollTop = transcript.parentElement.scrollHeight;
+      return message;
+    }
 
-<footer>© <span id="yr"></span> Mina Maged Zekry Gayid · Built with care in Aswan, Egypt</footer>
+    function instantReply(question) {
+      const q = question.toLowerCase();
+      if (q.includes("fit") || q.includes("hire") || q.includes("team") || q.includes("role")) return "Mina is a strong fit for work where clinical context, real-world healthcare operations, and growing AI fluency need to meet. He can help teams understand the problem behind a workflow and communicate across clinical, business, and technical perspectives. What outcome is your team trying to improve?";
+      if (q.includes("contribute") || q.includes("project") || q.includes("strength")) return "Mina can contribute to workflow discovery, healthcare and clinic-operations thinking, AI-assisted research and file workflows, prompt design, and clear communication between clinical and technical stakeholders. His approach is practical and grounded in human review.";
+      if (q.includes("approach") || q.includes("work") || q.includes("problem")) return "Mina starts by clarifying the patient, team, or business need; defining a useful outcome; mapping constraints; and testing a focused path. He pays attention to model limitations and keeps people in the loop where judgment matters.";
+      if (q.includes("skill") || q.includes("ai") || q.includes("technical")) return "His AI skills include Claude API use, prompt engineering, generative AI, AI workflow design, responsible AI, and evaluating model capabilities and limitations. He also has working knowledge of Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel.";
+      if (q.includes("experience") || q.includes("background") || q.includes("career")) return "Mina is currently an Applied AI Intern at FlyRank AI, owns and practices at Happy Dental Clinic, and previously worked as a dentist in Egypt Healthcare Authority primary care. He is also pursuing an MBA focused on hospital and healthcare facilities administration.";
+      if (q.includes("certificate") || q.includes("credential") || q.includes("anthropic")) return "Mina earned seven Anthropic Academy credentials, including Building with the Claude API, AI Fluency for Builders, Claude 101, AI Capabilities and Limitations, Introduction to Claude Cowork, and AI Fluency Framework & Foundations.";
+      return "I can help with Mina's background, team fit, AI skills, selected workflow portfolio, or working approach. Ask one of those, or describe the project you have in mind.";
+    }
 
+    function responseText(result) {
+      const content = result && result.message && result.message.content ? result.message.content : result && result.choices && result.choices[0] && result.choices[0].message && result.choices[0].message.content;
+      if (Array.isArray(content)) return content.map((part) => typeof part === "string" ? part : part.text || "").join("");
+      return typeof content === "string" ? content : "";
+    }
 
-<button class="mina-assistant-toggle" id="minaAssistantToggle" type="button" aria-expanded="false" aria-controls="minaAssistant"><span>AI guide</span> Ask Mina</button>
-<aside class="mina-chat" id="minaAssistant" hidden role="dialog" aria-label="Mina collaboration guide">
-  <div class="mina-chat-head"><div class="mina-chat-mark">M</div><div><strong>Mina AI</strong><small>Portfolio and collaboration guide</small><small id="minaModelStatus">On-device AI — ready when you ask</small></div><button class="mina-chat-close" id="minaAssistantClose" type="button" aria-label="Close assistant">×</button></div>
-  <div class="mina-chat-body"><div id="minaChatTranscript" aria-live="polite"><p class="mina-chat-message">I can help hiring teams and partners understand where Mina's clinical, operational, business, and technology perspective may be useful. Ask about fit, strengths, or how he approaches a problem.</p></div>
-    <div class="mina-chat-options" aria-label="Suggested questions"><button type="button" data-question="Would Mina fit our healthcare team?">Team fit</button><button type="button" data-question="What can Mina contribute to a project?">Project contribution</button><button type="button" data-question="How does Mina approach a problem?">Working approach</button></div>
-    <form class="mina-chat-form" id="minaChatForm"><label class="sr-only" for="minaChatInput">Ask Mina AI a question</label><input id="minaChatInput" autocomplete="off" placeholder="Ask about collaboration..." /><button type="submit" aria-label="Send question">Send</button></form>
-    <button class="mina-chat-contact" id="minaLeadToggle" type="button">Send a collaboration brief →</button><form class="mina-lead-form" id="minaLeadForm" hidden><p>Nothing is tracked or sent automatically. Share only what you choose, then review the email before sending.</p><input id="minaLeadName" placeholder="Your name (optional)"><input id="minaLeadEmail" type="email" placeholder="Your email (optional)"><input id="minaLeadOrg" placeholder="Company or organisation (optional)"><textarea id="minaLeadMessage" required placeholder="Role, project or collaboration need"></textarea><label><input id="minaLeadConsent" type="checkbox"> I consent to sending this brief to Mina by email.</label><button type="submit">Open my email to send</button></form></div>
-</aside>
-<script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const minaAssistantToggle=document.getElementById('minaAssistantToggle');const minaAssistant=document.getElementById('minaAssistant');const minaAssistantClose=document.getElementById('minaAssistantClose');const minaChatForm=document.getElementById('minaChatForm');const minaChatInput=document.getElementById('minaChatInput');const minaChatTranscript=document.getElementById('minaChatTranscript');
-const minaSystem = `You are Mina AI, a concise, professional portfolio guide for Mina Maged Zekry Gayid. Use only these facts: Mina is a dentist and dental clinic owner in Aswan, Egypt; has healthcare operations and public primary-care experience; is pursuing an MBA; and has interests in healthcare, business, data and technology. Do not invent outcomes, credentials, employers, availability or clinical claims. Help hiring managers and collaborators assess fit. Ask one practical qualifying question when relevant. Do not give medical, dental, legal or financial advice. Do not ask for personal details in chat; offer the consent-based collaboration brief instead.`;
-let minaGenerator = null;
-async function minaGetGenerator(){
-  if(minaGenerator)return minaGenerator;
-  const status=document.getElementById('minaModelStatus');
-  status.textContent='Preparing private on-device AI — first use may download a model';
-  const importer=new Function('url','return import(url)');
-  const transformers=await importer('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1');
-  transformers.env.useBrowserCache=true;
-  minaGenerator=await transformers.pipeline('text-generation','onnx-community/Qwen2.5-0.5B-Instruct',{dtype:'q4',progress_callback:info=>{if(info.status==='progress'&&typeof info.progress==='number')status.textContent='Preparing private on-device AI — '+Math.round(info.progress)+'%';}});
-  status.textContent='On-device AI — conversation stays in this browser';
-  return minaGenerator;
-}
-function minaReply(question){const q=question.toLowerCase();if(q.includes('fit')||q.includes('hire')||q.includes('team')||q.includes('company')||q.includes('role'))return 'Mina is most relevant where clinical understanding, real clinic operations, business awareness, and growing technology fluency need to come together. What workflow or outcome is your team trying to improve?';if(q.includes('contribute')||q.includes('project')||q.includes('strength')||q.includes('skill'))return 'Mina can bring a practical healthcare perspective to workflow discovery, patient and operations thinking, data and reporting conversations, and communication between clinical and technical stakeholders. What problem is the project solving, and for whom?';if(q.includes('approach')||q.includes('work')||q.includes('process')||q.includes('problem'))return 'Mina starts with the real-world problem: clarify the patient, team, or business need; define a useful outcome; map constraints; then test a focused, workable path. That keeps technology tied to useful delivery rather than novelty.';return 'I can help you assess a possible role or collaboration from Mina’s portfolio. Ask about team fit, practical contribution, working approach, or his healthcare and business background.';}
-function minaAddMessage(text,kind){const message=document.createElement('p');message.className='mina-chat-message'+(kind==='user'?' user':'');message.textContent=text;minaChatTranscript.appendChild(message);minaChatTranscript.parentElement.scrollTop=minaChatTranscript.parentElement.scrollHeight;return message;}
-async function minaAsk(question){const cleaned=question.trim();if(!cleaned)return;minaAddMessage(cleaned,'user');minaChatInput.value='';const response=minaAddMessage('Preparing a tailored response…','assistant');minaChatInput.disabled=true;try{const generator=await minaGetGenerator();const recent=[...minaChatTranscript.querySelectorAll('.mina-chat-message')].slice(-7).map(el=>({role:el.classList.contains('user')?'user':'assistant',content:el.textContent}));const result=await generator([{role:'system',content:minaSystem},...recent],{max_new_tokens:170,temperature:.45,do_sample:true});const generated=result[0]&&result[0].generated_text;const text=Array.isArray(generated)?String((generated[generated.length-1]||{}).content||minaReply(cleaned)):String(generated||minaReply(cleaned));response.textContent=text.trim()||minaReply(cleaned);}catch(error){document.getElementById('minaModelStatus').textContent='Generative mode unavailable — using portfolio guide';response.textContent=minaReply(cleaned);}finally{minaChatInput.disabled=false;minaChatInput.focus();}if(/\b(hire|hiring|job|role|collaborat|partner|project|consult)\b/i.test(cleaned)){document.getElementById('minaLeadForm').hidden=false;}}
-function minaSetOpen(open){minaAssistant.hidden=!open;minaAssistantToggle.setAttribute('aria-expanded',String(open));if(open)minaChatInput.focus();}minaAssistantToggle.addEventListener('click',()=>minaSetOpen(minaAssistant.hidden));minaAssistantClose.addEventListener('click',()=>minaSetOpen(false));minaChatForm.addEventListener('submit',event=>{event.preventDefault();minaAsk(minaChatInput.value)});document.querySelectorAll('[data-question]').forEach(button=>button.addEventListener('click',()=>void minaAsk(button.dataset.question||'')));
-const minaLeadToggle=document.getElementById('minaLeadToggle');const minaLeadForm=document.getElementById('minaLeadForm');minaLeadToggle.addEventListener('click',()=>{minaLeadForm.hidden=!minaLeadForm.hidden;});minaLeadForm.addEventListener('submit',event=>{event.preventDefault();const message=document.getElementById('minaLeadMessage').value.trim();const consent=document.getElementById('minaLeadConsent').checked;if(!message||!consent)return;const body=['Name: '+(document.getElementById('minaLeadName').value||'Not provided'),'Email: '+(document.getElementById('minaLeadEmail').value||'Not provided'),'Organisation: '+(document.getElementById('minaLeadOrg').value||'Not provided'),'','Collaboration / job enquiry:',message,'','Sent with the visitor’s consent from Mina AI.'].join('\n');window.location.href='mailto:minagayid@gmail.com?subject='+encodeURIComponent('New collaboration or job enquiry from Mina AI')+'&body='+encodeURIComponent(body);});
-</script>
+    function withTimeout(promise, ms) {
+      return Promise.race([promise, new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms))]);
+    }
+
+    async function askMina(question) {
+      const cleaned = question.trim();
+      if (!cleaned) return;
+      addMessage(cleaned, "user");
+      chatInput.value = "";
+      chatInput.disabled = true;
+      const response = addMessage("Thinking...", "assistant");
+      try {
+        if (!window.puter || !window.puter.ai || typeof window.puter.ai.chat !== "function") throw new Error("Puter.js unavailable");
+        const recent = Array.from(transcript.querySelectorAll(".chat-message")).filter((element) => element.textContent !== "Thinking...").slice(-7).map((element) => ({ role: element.classList.contains("user") ? "user" : "assistant", content: element.textContent }));
+        const result = await withTimeout(window.puter.ai.chat([{ role: "system", content: systemPrompt }, ...recent], { model: modelName, stream: false, max_tokens: 220, reasoning_effort: "low", verbosity: "low", temperature: .25 }), 6500);
+        const answer = responseText(result).trim();
+        if (!answer) throw new Error("empty response");
+        response.textContent = answer;
+        modelStatus.textContent = "GPT-OSS 20B via Puter.js · online";
+      } catch (error) {
+        response.textContent = instantReply(cleaned);
+        modelStatus.textContent = "Instant portfolio guide · GPT-OSS retry available";
+      } finally {
+        chatInput.disabled = false;
+        chatInput.focus();
+      }
+      if (/\b(hire|hiring|job|role|collaborat|partner|project|consult)\b/i.test(cleaned)) leadForm.hidden = false;
+    }
+
+    chatForm.addEventListener("submit", (event) => { event.preventDefault(); void askMina(chatInput.value); });
+    document.querySelectorAll("[data-question]").forEach((button) => button.addEventListener("click", () => void askMina(button.dataset.question || "")));
+    leadToggle.addEventListener("click", () => { leadForm.hidden = !leadForm.hidden; });
+    leadForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const message = document.getElementById("leadMessage").value.trim();
+      if (!message || !document.getElementById("leadConsent").checked) return;
+      const body = ["Name: " + (document.getElementById("leadName").value || "Not provided"), "Email: " + (document.getElementById("leadEmail").value || "Not provided"), "Organisation: " + (document.getElementById("leadOrg").value || "Not provided"), "", "Collaboration / job enquiry:", message, "", "Sent with the visitor's consent from Mina AI."].join("\n");
+      window.location.href = "mailto:minagayid@gmail.com?subject=" + encodeURIComponent("New collaboration or job enquiry from Mina AI") + "&body=" + encodeURIComponent(body);
+    });
+  </script>
 </body>
 </html>
