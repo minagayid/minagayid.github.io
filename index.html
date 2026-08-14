@@ -7,9 +7,12 @@
   <meta name="description" content="Portfolio of Mina Maged Zekry Gayid: applied AI intern, dentist, clinic owner, and healthcare MBA candidate in Aswan, Egypt.">
   <meta name="author" content="Mina Maged Zekry Gayid">
   <meta name="theme-color" content="#102a43">
+  <link rel="canonical" href="https://minagayid.github.io/">
   <meta property="og:title" content="Mina Maged Zekry Gayid | Applied AI, Healthcare & Dentistry">
   <meta property="og:description" content="A healthcare professional building practical bridges between clinical care, operations, data, and AI.">
+  <meta property="og:url" content="https://minagayid.github.io/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -42,6 +45,9 @@
     .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
     h1, h2, h3, .brand, .serif { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .skip-link { position: absolute; left: 16px; top: -52px; z-index: 100; padding: 10px 14px; border-radius: 9px; color: #062c32; background: #57d9ce; font-weight: 700; transition: top .2s ease; }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid #57d9ce; outline-offset: 3px; }
 
     header.nav {
       position: sticky;
@@ -121,6 +127,8 @@
     .card h3 { color: var(--navy); font-size: 1.25rem; }
     .card .card-sub { margin-top: 6px; color: var(--teal-dark); font-weight: 700; font-size: .9rem; }
     .card .card-meta { margin-top: 4px; color: var(--muted); font-size: .86rem; }
+    .text-link { color: var(--teal-dark); font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .text-link:hover { color: var(--navy); }
     .project-card { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
     .project-label { display: inline-block; margin-bottom: 8px; color: var(--teal-dark); font-size: .76rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
     .project-badge { padding: 13px 16px; border-radius: 14px; color: var(--navy); background: var(--soft-teal); font-size: .8rem; font-weight: 700; text-align: center; }
@@ -182,6 +190,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav">
     <div class="wrap nav-in">
       <a class="brand" href="#top" aria-label="Mina Gayid home">Mina<span>.</span>Gayid</a>
@@ -189,6 +198,7 @@
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#work">AI work</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -205,6 +215,7 @@
         <p class="hero-lede">I bring clinical judgment, clinic operations experience, and practical AI fluency to healthcare and business problems that deserve a thoughtful, useful solution.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="mailto:minagayid@gmail.com">Start a conversation</a>
+          <a class="button button-ghost" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">View LinkedIn</a>
           <a class="button button-ghost" href="#experience">Explore experience</a>
         </div>
       </div>
@@ -215,7 +226,7 @@
     </div>
   </div>
 
-  <main class="wrap">
+  <main class="wrap" id="main-content" tabindex="-1">
     <section class="block reveal" id="about">
       <div class="section-heading"><span class="section-number">01</span><h2>About</h2><span class="section-rule"></span></div>
       <div class="story-grid">
@@ -238,7 +249,7 @@
       <div class="section-heading"><span class="section-number">02</span><h2>Experience</h2><span class="section-rule"></span></div>
       <div class="timeline">
         <article class="timeline-item">
-          <div class="timeline-top"><div><span class="timeline-role">AI Intern</span> · <span class="timeline-org">FlyRank AI</span></div><span class="timeline-date">Jun 2026 · Present</span></div>
+          <div class="timeline-top"><div><span class="timeline-role">Applied AI Intern</span> · <span class="timeline-org">FlyRank AI</span></div><span class="timeline-date">Jun 2026 · Present</span></div>
           <ul class="bullet-list"><li>Apply AI tools and prompt-engineering workflows to practical business use cases in an AI-powered organic-growth environment.</li><li>Build fluency with Claude, AI automation, research and file workflows, and responsible model use.</li><li>Bring clinical and healthcare-management context to technology-first problem solving in a remote startup setting.</li></ul>
         </article>
         <article class="timeline-item">
@@ -255,7 +266,7 @@
     <section class="block reveal" id="work">
       <div class="section-heading"><span class="section-number">03</span><h2>Selected AI work</h2><span class="section-rule"></span></div>
       <article class="card project-card">
-        <div><span class="project-label">Applied AI and Claude Workflow Portfolio</span><h3>Turning model capabilities into practical, reviewable workflows.</h3><p class="card-meta">FlyRank AI internship / Anthropic Academy · Jul 2026</p><ul class="bullet-list"><li>Completed hands-on exercises covering Claude API use, prompt engineering, research and file workflows, model limitations, and human-in-the-loop review.</li><li>Structured healthcare and business scenarios into reusable prompt-driven workflows and evaluated outputs for relevance, limitations, and responsible use.</li></ul></div>
+        <div><span class="project-label">Applied AI and Claude Workflow Portfolio</span><h3>Turning model capabilities into practical, reviewable workflows.</h3><p class="card-meta">FlyRank AI internship / Anthropic Academy · Jul 2026</p><ul class="bullet-list"><li>Completed hands-on exercises covering Claude API use, prompt engineering, research and file workflows, model limitations, and human-in-the-loop review.</li><li>Structured healthcare and business scenarios into reusable prompt-driven workflows and evaluated outputs for relevance, limitations, and responsible use.</li></ul><p class="card-meta"><a class="text-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">Connect with Mina on LinkedIn →</a></p></div>
         <div class="project-badge"><span>7</span>Anthropic Academy<br>credentials</div>
       </article>
     </section>
@@ -290,7 +301,7 @@
     <section class="contact reveal" id="contact">
       <h2>Let's build something useful.</h2>
       <p>Open to thoughtful conversations about healthcare, business, and applied AI.</p>
-      <div class="contact-links"><a class="contact-link" href="mailto:minagayid@gmail.com">minagayid@gmail.com</a><a class="contact-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid-6b5b3a137" target="_blank" rel="noopener">LinkedIn</a><a class="contact-link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="contact-links"><a class="contact-link" href="mailto:minagayid@gmail.com">minagayid@gmail.com</a><a class="contact-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">LinkedIn</a><a class="contact-link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a></div>
     </section>
   </main>
 
@@ -332,7 +343,7 @@
     const leadForm = document.getElementById("leadForm");
     const leadToggle = document.getElementById("leadToggle");
     const modelName = "openai/gpt-oss-20b";
-    const systemPrompt = "You are Mina AI, a concise and accurate portfolio guide for Mina Maged Zekry Gayid. Use only these facts: Mina is an Applied AI Intern at FlyRank AI from June 2026, a dentist and owner of Happy Dental Clinic in Aswan, a former dentist at Egypt Healthcare Authority's El Gozayra Family Medicine Unit, and an MBA candidate in Hospital and Healthcare Facilities Administration. His AI work includes Claude API training, prompt engineering, generative AI, AI workflow design, research and file workflows, responsible AI, and model capabilities and limitations. His working-knowledge data and programming skills include Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel, with familiarity with AWS, Azure, Word, PowerPoint, and Teams. He earned seven Anthropic Academy credentials and has a BDS from Modern Sciences and Arts University with GPA 3.72 and Highest Honors. Do not invent employers, outcomes, credentials, availability, or clinical claims. Do not give medical, dental, legal, or financial advice. Keep answers brief and practical, and suggest a collaboration question when useful.";
+    const systemPrompt = "You are Mina AI, a concise and accurate portfolio guide for Mina Maged Zekry Gayid. Use only these facts: Mina is an Applied AI Intern at FlyRank AI from June 2026, a dentist and owner of Happy Dental Clinic in Aswan, a former dentist at Egypt Healthcare Authority's El Gozayra Family Medicine Unit, and an MBA candidate in Hospital and Healthcare Facilities Administration. Mina's AI work includes Claude API training, prompt engineering, generative AI, AI workflow design, research and file workflows, responsible AI, and model capabilities and limitations. Mina's working-knowledge data and programming skills include Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel, with familiarity with AWS, Azure, Word, PowerPoint, and Teams. Mina earned seven Anthropic Academy credentials and has a BDS from Modern Sciences and Arts University with GPA 3.72 and Highest Honors. Do not invent employers, outcomes, credentials, availability, or clinical claims. Do not give medical, dental, legal, or financial advice. Keep answers brief and practical, and suggest a collaboration question when useful.";
 
     function setAssistantOpen(open) {
       assistant.hidden = !open;
@@ -353,11 +364,11 @@
 
     function instantReply(question) {
       const q = question.toLowerCase();
-      if (q.includes("fit") || q.includes("hire") || q.includes("team") || q.includes("role")) return "Mina is a strong fit for work where clinical context, real-world healthcare operations, and growing AI fluency need to meet. He can help teams understand the problem behind a workflow and communicate across clinical, business, and technical perspectives. What outcome is your team trying to improve?";
-      if (q.includes("contribute") || q.includes("project") || q.includes("strength")) return "Mina can contribute to workflow discovery, healthcare and clinic-operations thinking, AI-assisted research and file workflows, prompt design, and clear communication between clinical and technical stakeholders. His approach is practical and grounded in human review.";
-      if (q.includes("approach") || q.includes("work") || q.includes("problem")) return "Mina starts by clarifying the patient, team, or business need; defining a useful outcome; mapping constraints; and testing a focused path. He pays attention to model limitations and keeps people in the loop where judgment matters.";
-      if (q.includes("skill") || q.includes("ai") || q.includes("technical")) return "His AI skills include Claude API use, prompt engineering, generative AI, AI workflow design, responsible AI, and evaluating model capabilities and limitations. He also has working knowledge of Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel.";
-      if (q.includes("experience") || q.includes("background") || q.includes("career")) return "Mina is currently an Applied AI Intern at FlyRank AI, owns and practices at Happy Dental Clinic, and previously worked as a dentist in Egypt Healthcare Authority primary care. He is also pursuing an MBA focused on hospital and healthcare facilities administration.";
+      if (q.includes("fit") || q.includes("hire") || q.includes("team") || q.includes("role")) return "Mina is a strong fit for work where clinical context, real-world healthcare operations, and growing AI fluency need to meet. Mina can help teams understand the problem behind a workflow and communicate across clinical, business, and technical perspectives. What outcome is your team trying to improve?";
+      if (q.includes("contribute") || q.includes("project") || q.includes("strength")) return "Mina can contribute to workflow discovery, healthcare and clinic-operations thinking, AI-assisted research and file workflows, prompt design, and clear communication between clinical and technical stakeholders. Mina's approach is practical and grounded in human review.";
+      if (q.includes("approach") || q.includes("work") || q.includes("problem")) return "Mina starts by clarifying the patient, team, or business need; defining a useful outcome; mapping constraints; and testing a focused path. Mina pays attention to model limitations and keeps people in the loop where judgment matters.";
+      if (q.includes("skill") || q.includes("ai") || q.includes("technical")) return "Mina's AI skills include Claude API use, prompt engineering, generative AI, AI workflow design, responsible AI, and evaluating model capabilities and limitations. Mina also has working knowledge of Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel.";
+      if (q.includes("experience") || q.includes("background") || q.includes("career")) return "Mina is currently an Applied AI Intern at FlyRank AI, owns and practices at Happy Dental Clinic, and previously worked as a dentist in Egypt Healthcare Authority primary care. Mina is also pursuing an MBA focused on hospital and healthcare facilities administration.";
       if (q.includes("certificate") || q.includes("credential") || q.includes("anthropic")) return "Mina earned seven Anthropic Academy credentials, including Building with the Claude API, AI Fluency for Builders, Claude 101, AI Capabilities and Limitations, Introduction to Claude Cowork, and AI Fluency Framework & Foundations.";
       return "I can help with Mina's background, team fit, AI skills, selected workflow portfolio, or working approach. Ask one of those, or describe the project you have in mind.";
     }
