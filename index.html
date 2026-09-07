@@ -154,25 +154,35 @@
     .contact-link:hover { transform: translateY(-2px); border-color: var(--teal); color: var(--teal-dark); }
     footer { padding: 27px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; text-align: center; }
 
-    .assistant-toggle { position: fixed; right: 22px; bottom: 22px; z-index: 50; display: inline-flex; align-items: center; gap: 9px; padding: 13px 17px; border: 0; border-radius: 999px; color: #fff; background: var(--navy); box-shadow: 0 18px 38px rgba(16,42,67,.28); font: 700 .86rem Inter, sans-serif; cursor: pointer; }
-    .assistant-toggle::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #73e0d4; box-shadow: 0 0 0 4px rgba(115,224,212,.18); }
-    .assistant-toggle span { color: #9be8e0; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; }
+    .assistant-toggle { position: fixed; right: 22px; bottom: 22px; z-index: 50; display: inline-flex; align-items: center; gap: 10px; padding: 10px 15px 10px 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 16px; color: #fff; background: linear-gradient(135deg, var(--navy), #0c7272); box-shadow: 0 18px 38px rgba(16,42,67,.28); font: 700 .84rem Inter, sans-serif; cursor: pointer; text-align: left; }
+    .assistant-toggle:hover { transform: translateY(-2px); background: linear-gradient(135deg, #163b5b, #0e8581); }
+    .assistant-pulse { width: 10px; height: 10px; flex: 0 0 10px; border-radius: 50%; background: #73e0d4; box-shadow: 0 0 0 4px rgba(115,224,212,.18); }
+    .assistant-toggle-copy { display: grid; gap: 1px; }
+    .assistant-toggle-copy strong { color: #fff; font-size: .84rem; }
+    .assistant-toggle-copy small { color: #b9e9e4; font-size: .66rem; font-weight: 600; }
+    .assistant-toggle-action { padding-left: 5px; color: #9be8e0; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; }
     .chat { position: fixed; right: 22px; bottom: 78px; z-index: 51; width: min(400px, calc(100vw - 34px)); overflow: hidden; border: 1px solid #d5e3ea; border-radius: 18px; background: var(--paper); box-shadow: 0 24px 70px rgba(16,42,67,.25); }
     .chat[hidden] { display: none; }
     .chat-head { display: flex; align-items: center; gap: 11px; padding: 16px 18px; color: #fff; background: linear-gradient(135deg, var(--navy), var(--navy-2)); }
     .chat-mark { display: grid; width: 35px; height: 35px; place-items: center; border-radius: 50%; color: #07333a; background: #57d9ce; font-family: "DM Serif Display", Georgia, serif; font-size: 1.18rem; }
     .chat-head strong { display: block; font-size: .95rem; }
     .chat-head small { display: block; margin-top: 1px; color: #b8d4e2; font-size: .72rem; }
-    .chat-close { margin-left: auto; padding: 4px; border: 0; color: #dcecf4; background: transparent; font-size: 1.35rem; line-height: 1; cursor: pointer; }
+    .chat-head-actions { display: flex; align-items: center; gap: 5px; margin-left: auto; }
+    .chat-clear { padding: 5px 7px; border: 1px solid rgba(255,255,255,.22); border-radius: 7px; color: #dcecf4; background: transparent; font: 700 .66rem Inter, sans-serif; cursor: pointer; }
+    .chat-clear:hover { background: rgba(255,255,255,.12); }
+    .chat-close { padding: 4px; border: 0; color: #dcecf4; background: transparent; font-size: 1.35rem; line-height: 1; cursor: pointer; }
     #modelStatus { color: #a6eee7; }
     .chat-body { max-height: 460px; overflow: auto; padding: 15px; background: #f7fbfc; }
     .chat-message { margin: 0 0 10px; padding: 11px 13px; border-radius: 12px; color: #24434d; background: #e8f5f3; font-size: .86rem; line-height: 1.55; white-space: pre-wrap; }
     .chat-message.user { margin-left: 32px; color: #18344d; background: #e7eef5; }
+    .chat-trust { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 11px; }
+    .chat-trust span { padding: 4px 7px; border: 1px solid #cce4e2; border-radius: 999px; color: #38666b; background: #fff; font-size: .65rem; font-weight: 700; }
     .chat-options { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0; }
     .chat-options button { padding: 7px 10px; border: 1px solid #b8d9d7; border-radius: 999px; color: var(--teal-dark); background: #fff; font: 700 .73rem Inter, sans-serif; cursor: pointer; }
     .chat-options button:hover { background: #e8f7f6; }
     .chat-form { display: flex; gap: 7px; padding-top: 2px; }
     .chat-form input { min-width: 0; flex: 1; padding: 10px 11px; border: 1px solid #cddbe3; border-radius: 9px; color: var(--ink); font: .84rem Inter, sans-serif; }
+    .chat-form input:disabled { background: #edf3f5; }
     .chat-form button, .lead-form button { padding: 0 13px; border: 0; border-radius: 9px; color: #07333a; background: var(--teal); font: 700 .82rem Inter, sans-serif; cursor: pointer; }
     .chat-contact { width: 100%; margin-top: 12px; padding: 12px 0 0; border: 0; border-top: 1px solid #dbe7ec; color: var(--navy); background: transparent; font: 700 .8rem Inter, sans-serif; text-align: left; cursor: pointer; }
     .chat-contact:hover { color: var(--teal-dark); }
@@ -307,13 +317,14 @@
 
   <footer>&copy; <span id="year"></span> Mina Maged Zekry Gayid · Aswan, Egypt</footer>
 
-  <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistant"><span>GPT-OSS 20B</span> Ask Mina</button>
+  <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistant"><span class="assistant-pulse" aria-hidden="true"></span><span class="assistant-toggle-copy"><strong>Mina AI</strong><small>Evidence-first guide</small></span><span class="assistant-toggle-action">Open</span></button>
   <aside class="chat" id="assistant" hidden role="dialog" aria-label="Mina AI portfolio guide">
-    <div class="chat-head"><div class="chat-mark">M</div><div><strong>Mina AI</strong><small>Grounded portfolio guide</small><small id="modelStatus">Fast hosted GPT-OSS 20B · ready</small></div><button class="chat-close" id="assistantClose" type="button" aria-label="Close assistant">&times;</button></div>
+    <div class="chat-head"><div class="chat-mark">M</div><div><strong>Mina AI</strong><small>Evidence-first portfolio guide</small><small id="modelStatus">Protected mode · ready</small></div><div class="chat-head-actions"><button class="chat-clear" id="clearChat" type="button">Clear</button><button class="chat-close" id="assistantClose" type="button" aria-label="Close assistant">&times;</button></div></div>
     <div class="chat-body">
       <div id="chatTranscript" aria-live="polite"><p class="chat-message">I can help you understand Mina's experience, skills, AI work, and potential fit for a team or project. Ask me anything about the portfolio.</p></div>
+      <div class="chat-trust" aria-label="Assistant safeguards"><span>Grounded facts</span><span>No credentials</span><span>Human-led</span></div>
       <div class="chat-options" aria-label="Suggested questions"><button type="button" data-question="Would Mina fit our healthcare team?">Team fit</button><button type="button" data-question="What can Mina contribute to an AI project?">Project contribution</button><button type="button" data-question="How does Mina approach a problem?">Working approach</button><button type="button" data-question="What are Mina's AI skills?">AI skills</button></div>
-      <form class="chat-form" id="chatForm"><label class="sr-only" for="chatInput">Ask Mina AI a question</label><input id="chatInput" autocomplete="off" placeholder="Ask about collaboration..."><button type="submit">Send</button></form>
+      <form class="chat-form" id="chatForm"><label class="sr-only" for="chatInput">Ask Mina AI a question</label><input id="chatInput" maxlength="600" autocomplete="off" placeholder="Ask about Mina's work..."><button type="submit">Send</button></form>
       <button class="chat-contact" id="leadToggle" type="button">Send a collaboration brief -&gt;</button>
       <form class="lead-form" id="leadForm" hidden><p>Nothing is sent automatically. Share only what you choose, then review the email before sending.</p><input id="leadName" placeholder="Your name (optional)"><input id="leadEmail" type="email" placeholder="Your email (optional)"><input id="leadOrg" placeholder="Company or organisation (optional)"><textarea id="leadMessage" required placeholder="Role, project, or collaboration need"></textarea><label><input id="leadConsent" type="checkbox"> I consent to sending this brief to Mina by email.</label><button type="submit">Open my email to send</button></form>
     </div>
@@ -340,9 +351,11 @@
     const chatInput = document.getElementById("chatInput");
     const transcript = document.getElementById("chatTranscript");
     const modelStatus = document.getElementById("modelStatus");
+    const clearChat = document.getElementById("clearChat");
     const leadForm = document.getElementById("leadForm");
     const leadToggle = document.getElementById("leadToggle");
     const modelName = "openai/gpt-oss-20b";
+    const bridgeUrl = document.querySelector('meta[name="mina-ai-bridge"]')?.content || "";
     const systemPrompt = "You are Mina AI, a concise and accurate portfolio guide for Mina Maged Zekry Gayid. Use only these facts: Mina is an Applied AI Intern at FlyRank AI from June 2026, a dentist and owner of Happy Dental Clinic in Aswan, a former dentist at Egypt Healthcare Authority's El Gozayra Family Medicine Unit, and an MBA candidate in Hospital and Healthcare Facilities Administration. Mina's AI work includes Claude API training, prompt engineering, generative AI, AI workflow design, research and file workflows, responsible AI, and model capabilities and limitations. Mina's working-knowledge data and programming skills include Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel, with familiarity with AWS, Azure, Word, PowerPoint, and Teams. Mina earned seven Anthropic Academy credentials and has a BDS from Modern Sciences and Arts University with GPA 3.72 and Highest Honors. Do not invent employers, outcomes, credentials, availability, or clinical claims. Do not give medical, dental, legal, or financial advice. Keep answers brief and practical, and suggest a collaboration question when useful.";
 
     function setAssistantOpen(open) {
@@ -352,6 +365,11 @@
     }
     assistantToggle.addEventListener("click", () => setAssistantOpen(assistant.hidden));
     assistantClose.addEventListener("click", () => setAssistantOpen(false));
+    clearChat.addEventListener("click", () => {
+      transcript.innerHTML = "<p class=\"chat-message\">I can help you understand Mina's experience, skills, AI work, and potential fit for a team or project.</p>";
+      modelStatus.textContent = "Protected mode · ready";
+      chatInput.focus();
+    });
 
     function addMessage(text, kind) {
       const message = document.createElement("p");
@@ -370,6 +388,7 @@
       if (q.includes("skill") || q.includes("ai") || q.includes("technical")) return "Mina's AI skills include Claude API use, prompt engineering, generative AI, AI workflow design, responsible AI, and evaluating model capabilities and limitations. Mina also has working knowledge of Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel.";
       if (q.includes("experience") || q.includes("background") || q.includes("career")) return "Mina is currently an Applied AI Intern at FlyRank AI, owns and practices at Happy Dental Clinic, and previously worked as a dentist in Egypt Healthcare Authority primary care. Mina is also pursuing an MBA focused on hospital and healthcare facilities administration.";
       if (q.includes("certificate") || q.includes("credential") || q.includes("anthropic")) return "Mina earned seven Anthropic Academy credentials, including Building with the Claude API, AI Fluency for Builders, Claude 101, AI Capabilities and Limitations, Introduction to Claude Cowork, and AI Fluency Framework & Foundations.";
+      if (q.includes("automation") || q.includes("gmail") || q.includes("telegram") || q.includes("whatsapp")) return "Mina's automation direction is approval-first: classify and draft privately, keep credentials server-side, and require human review before any outbound message. The public portfolio does not expose private integrations.";
       return "I can help with Mina's background, team fit, AI skills, selected workflow portfolio, or working approach. Ask one of those, or describe the project you have in mind.";
     }
 
@@ -383,6 +402,17 @@
       return Promise.race([promise, new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms))]);
     }
 
+    async function requestBridge(question, recent) {
+      if (!bridgeUrl) return "";
+      const result = await withTimeout(fetch(bridgeUrl, {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question, history: recent })
+      }).then((response) => response.ok ? response.json() : Promise.reject(new Error("bridge unavailable"))), 7000);
+      return String(result.answer || responseText(result) || "").trim();
+    }
+
     async function askMina(question) {
       const cleaned = question.trim();
       if (!cleaned) return;
@@ -391,16 +421,19 @@
       chatInput.disabled = true;
       const response = addMessage("Thinking...", "assistant");
       try {
-        if (!window.puter || !window.puter.ai || typeof window.puter.ai.chat !== "function") throw new Error("Puter.js unavailable");
         const recent = Array.from(transcript.querySelectorAll(".chat-message")).filter((element) => element.textContent !== "Thinking...").slice(-7).map((element) => ({ role: element.classList.contains("user") ? "user" : "assistant", content: element.textContent }));
-        const result = await withTimeout(window.puter.ai.chat([{ role: "system", content: systemPrompt }, ...recent], { model: modelName, stream: false, max_tokens: 220, reasoning_effort: "low", verbosity: "low", temperature: .25 }), 6500);
-        const answer = responseText(result).trim();
+        let answer = await requestBridge(cleaned, recent);
+        if (answer) modelStatus.textContent = "Protected bridge · portfolio context";
+        if (!answer && window.puter && window.puter.ai && typeof window.puter.ai.chat === "function") {
+          const result = await withTimeout(window.puter.ai.chat([{ role: "system", content: systemPrompt }, ...recent], { model: modelName, stream: false, max_tokens: 220, reasoning_effort: "low", verbosity: "low", temperature: .25 }), 6500);
+          answer = responseText(result).trim();
+          if (answer) modelStatus.textContent = "Hosted draft · grounded portfolio context";
+        }
         if (!answer) throw new Error("empty response");
         response.textContent = answer;
-        modelStatus.textContent = "GPT-OSS 20B via Puter.js · online";
       } catch (error) {
         response.textContent = instantReply(cleaned);
-        modelStatus.textContent = "Instant portfolio guide · GPT-OSS retry available";
+        modelStatus.textContent = "Instant guide · private integrations protected";
       } finally {
         chatInput.disabled = false;
         chatInput.focus();
