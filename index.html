@@ -397,12 +397,13 @@
         try { target = String((await fetch("assistant-bridge.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : {})).url || ""); } catch (_) { target = ""; }
       }
       if (!target) return "";
-      const result = await withTimeout(fetch(target, {
+      const result = await fetch(target, {
         method: "POST",
         mode: "cors",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, history: recent })
-      }).then((response) => response.ok ? response.json() : Promise.reject(new Error("bridge unavailable"))), 7000);
+        body: JSON.stringify({ question, history: recent.slice(0, -1) }),
+        signal: AbortSignal.timeout(60000)
+      }).then((response) => response.ok ? response.json() : Promise.reject(new Error("bridge unavailable")));
       return String(result.answer || responseText(result) || "").trim();
     }
 
@@ -419,7 +420,7 @@
         if (!answer) throw new Error("empty response");
         response.textContent = answer;
       } catch (error) {
-        response.textContent = instantReply(cleaned);
+        response.textContent = "The live assistant is temporarily unavailable. " + instantReply(cleaned);
       } finally {
         chatInput.disabled = false;
         chatInput.focus();
