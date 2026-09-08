@@ -7,6 +7,7 @@
   <meta name="description" content="Portfolio of Mina Maged Zekry Gayid: applied AI intern, dentist, clinic owner, and healthcare MBA candidate in Aswan, Egypt.">
   <meta name="author" content="Mina Maged Zekry Gayid">
   <meta name="theme-color" content="#102a43">
+  <meta name="mina-ai-bridge" content="">
   <link rel="canonical" href="https://minagayid.github.io/">
   <meta property="og:title" content="Mina Maged Zekry Gayid | Applied AI, Healthcare & Dentistry">
   <meta property="og:description" content="A healthcare professional building practical bridges between clinical care, operations, data, and AI.">
@@ -317,13 +318,11 @@
 
   <footer>&copy; <span id="year"></span> Mina Maged Zekry Gayid · Aswan, Egypt</footer>
 
-  <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistant"><span class="assistant-pulse" aria-hidden="true"></span><span class="assistant-toggle-copy"><strong>Mina AI</strong><small>Evidence-first guide</small></span><span class="assistant-toggle-action">Open</span></button>
+  <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistant"><span class="assistant-pulse" aria-hidden="true"></span><span class="assistant-toggle-copy"><strong>Mina AI</strong><small>How can I help?</small></span><span class="assistant-toggle-action">Open</span></button>
   <aside class="chat" id="assistant" hidden role="dialog" aria-label="Mina AI portfolio guide">
-    <div class="chat-head"><div class="chat-mark">M</div><div><strong>Mina AI</strong><small>Evidence-first portfolio guide</small><small id="modelStatus">Protected mode · ready</small></div><div class="chat-head-actions"><button class="chat-clear" id="clearChat" type="button">Clear</button><button class="chat-close" id="assistantClose" type="button" aria-label="Close assistant">&times;</button></div></div>
+    <div class="chat-head"><div class="chat-mark">M</div><div><strong>Mina AI</strong><small>How can I help?</small></div><button class="chat-close" id="assistantClose" type="button" aria-label="Close assistant">&times;</button></div>
     <div class="chat-body">
-      <div id="chatTranscript" aria-live="polite"><p class="chat-message">I can help you understand Mina's experience, skills, AI work, and potential fit for a team or project. Ask me anything about the portfolio.</p></div>
-      <div class="chat-trust" aria-label="Assistant safeguards"><span>Grounded facts</span><span>No credentials</span><span>Human-led</span></div>
-      <div class="chat-options" aria-label="Suggested questions"><button type="button" data-question="Would Mina fit our healthcare team?">Team fit</button><button type="button" data-question="What can Mina contribute to an AI project?">Project contribution</button><button type="button" data-question="How does Mina approach a problem?">Working approach</button><button type="button" data-question="What are Mina's AI skills?">AI skills</button></div>
+      <div id="chatTranscript" aria-live="polite"><p class="chat-message">Hi — how can I help you today?</p></div>
       <form class="chat-form" id="chatForm"><label class="sr-only" for="chatInput">Ask Mina AI a question</label><input id="chatInput" maxlength="600" autocomplete="off" placeholder="Ask about Mina's work..."><button type="submit">Send</button></form>
       <button class="chat-contact" id="leadToggle" type="button">Send a collaboration brief -&gt;</button>
       <form class="lead-form" id="leadForm" hidden><p>Nothing is sent automatically. Share only what you choose, then review the email before sending.</p><input id="leadName" placeholder="Your name (optional)"><input id="leadEmail" type="email" placeholder="Your email (optional)"><input id="leadOrg" placeholder="Company or organisation (optional)"><textarea id="leadMessage" required placeholder="Role, project, or collaboration need"></textarea><label><input id="leadConsent" type="checkbox"> I consent to sending this brief to Mina by email.</label><button type="submit">Open my email to send</button></form>
@@ -350,13 +349,9 @@
     const chatForm = document.getElementById("chatForm");
     const chatInput = document.getElementById("chatInput");
     const transcript = document.getElementById("chatTranscript");
-    const modelStatus = document.getElementById("modelStatus");
-    const clearChat = document.getElementById("clearChat");
     const leadForm = document.getElementById("leadForm");
     const leadToggle = document.getElementById("leadToggle");
-    const modelName = "openai/gpt-oss-20b";
     const bridgeUrl = document.querySelector('meta[name="mina-ai-bridge"]')?.content || "";
-    const systemPrompt = "You are Mina AI, a concise and accurate portfolio guide for Mina Maged Zekry Gayid. Use only these facts: Mina is an Applied AI Intern at FlyRank AI from June 2026, a dentist and owner of Happy Dental Clinic in Aswan, a former dentist at Egypt Healthcare Authority's El Gozayra Family Medicine Unit, and an MBA candidate in Hospital and Healthcare Facilities Administration. Mina's AI work includes Claude API training, prompt engineering, generative AI, AI workflow design, research and file workflows, responsible AI, and model capabilities and limitations. Mina's working-knowledge data and programming skills include Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel, with familiarity with AWS, Azure, Word, PowerPoint, and Teams. Mina earned seven Anthropic Academy credentials and has a BDS from Modern Sciences and Arts University with GPA 3.72 and Highest Honors. Do not invent employers, outcomes, credentials, availability, or clinical claims. Do not give medical, dental, legal, or financial advice. Keep answers brief and practical, and suggest a collaboration question when useful.";
 
     function setAssistantOpen(open) {
       assistant.hidden = !open;
@@ -365,12 +360,6 @@
     }
     assistantToggle.addEventListener("click", () => setAssistantOpen(assistant.hidden));
     assistantClose.addEventListener("click", () => setAssistantOpen(false));
-    clearChat.addEventListener("click", () => {
-      transcript.innerHTML = "<p class=\"chat-message\">I can help you understand Mina's experience, skills, AI work, and potential fit for a team or project.</p>";
-      modelStatus.textContent = "Protected mode · ready";
-      chatInput.focus();
-    });
-
     function addMessage(text, kind) {
       const message = document.createElement("p");
       message.className = "chat-message" + (kind === "user" ? " user" : "");
@@ -403,8 +392,12 @@
     }
 
     async function requestBridge(question, recent) {
-      if (!bridgeUrl) return "";
-      const result = await withTimeout(fetch(bridgeUrl, {
+      let target = bridgeUrl;
+      if (!target) {
+        try { target = String((await fetch("assistant-bridge.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : {})).url || ""); } catch (_) { target = ""; }
+      }
+      if (!target) return "";
+      const result = await withTimeout(fetch(target, {
         method: "POST",
         mode: "cors",
         headers: { "Content-Type": "application/json" },
@@ -423,17 +416,10 @@
       try {
         const recent = Array.from(transcript.querySelectorAll(".chat-message")).filter((element) => element.textContent !== "Thinking...").slice(-7).map((element) => ({ role: element.classList.contains("user") ? "user" : "assistant", content: element.textContent }));
         let answer = await requestBridge(cleaned, recent);
-        if (answer) modelStatus.textContent = "Protected bridge · portfolio context";
-        if (!answer && window.puter && window.puter.ai && typeof window.puter.ai.chat === "function") {
-          const result = await withTimeout(window.puter.ai.chat([{ role: "system", content: systemPrompt }, ...recent], { model: modelName, stream: false, max_tokens: 220, reasoning_effort: "low", verbosity: "low", temperature: .25 }), 6500);
-          answer = responseText(result).trim();
-          if (answer) modelStatus.textContent = "Hosted draft · grounded portfolio context";
-        }
         if (!answer) throw new Error("empty response");
         response.textContent = answer;
       } catch (error) {
         response.textContent = instantReply(cleaned);
-        modelStatus.textContent = "Instant guide · private integrations protected";
       } finally {
         chatInput.disabled = false;
         chatInput.focus();

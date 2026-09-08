@@ -11,7 +11,7 @@ Personal portfolio for [Mina Maged Zekry Gayid](https://minagayid.github.io/): a
 
 ## Chatbot
 
-The portfolio assistant uses Puter.js to call the hosted `openai/gpt-oss-20b` open-weight model. It does not put an API key in this public repository or download a large model into a visitor's browser. If hosted inference is unavailable, it falls back to a small, grounded portfolio guide so the site remains useful and responsive.
+The portfolio assistant is a compact chat UI. When the protected bridge URL is configured, it sends only the visitor's question and short chat history to the private Oracle Qwen model through the server-side gateway; no API key or model is exposed in GitHub Pages. If the bridge is unavailable, it fails closed to a small grounded portfolio guide.
 
 The assistant only answers from Mina's published portfolio facts and is not a medical, dental, legal, or financial advisor.
 
