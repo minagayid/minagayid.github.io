@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mina Maged Zekry Gayid | Applied AI, Healthcare & Dentistry</title>
-  <meta name="description" content="Portfolio of Mina Maged Zekry Gayid: applied AI intern, dentist, clinic owner, and healthcare MBA candidate in Aswan, Egypt.">
+  <title>Mina Gayid | Reliable Agentic AI for High-Stakes Systems</title>
+  <meta name="description" content="Portfolio of Mina Maged Zekry Gayid: applied AI intern, dentist, clinic owner, and healthcare MBA candidate in Egypt.">
   <meta name="author" content="Mina Maged Zekry Gayid">
   <meta name="theme-color" content="#102a43">
   <meta name="mina-ai-bridge" content="">
   <link rel="canonical" href="https://minagayid.github.io/">
-  <meta property="og:title" content="Mina Maged Zekry Gayid | Applied AI, Healthcare & Dentistry">
-  <meta property="og:description" content="A healthcare professional building practical bridges between clinical care, operations, data, and AI.">
+  <meta property="og:title" content="Mina Gayid | Reliable Agentic AI for High-Stakes Systems">
+  <meta property="og:description" content="Applied AI projects with inspectable traces, explicit permissions, source provenance and honest evaluation.">
   <meta property="og:url" content="https://minagayid.github.io/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -198,6 +198,20 @@
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
     @media (max-width: 800px) { .hero-in { flex-direction: column-reverse; align-items: flex-start; gap: 34px; padding: 63px 0 72px; } .hero-card { width: 100%; max-width: 340px; } .story-grid { grid-template-columns: 1fr; } }
     @media (max-width: 620px) { .wrap { width: min(100% - 32px, 1120px); } .nav-links { display: none; } .hero-in { align-items: stretch; } .hero-card { margin: 0 auto; text-align: center; } .hero h1 { font-size: clamp(2.9rem, 15vw, 4.4rem); } section.block { padding-top: 58px; } .project-card { grid-template-columns: 1fr; } .project-badge { width: max-content; } .assistant-toggle { right: 14px; bottom: 14px; } .chat { right: 14px; bottom: 70px; } }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .evidence-grid .card { height: 100%; }
+    .evidence-label { display: inline-block; margin: 10px 0; padding: 4px 9px; background: var(--soft-teal); color: var(--teal-dark); border-radius: 7px; font-size: .76rem; font-weight: 700; }
+    .evidence-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-top: 20px; }
+    .evidence-table th, .evidence-table td { text-align: left; padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .table-scroll { overflow-x: auto; }
+    .page-intro { padding: 65px 0 25px; max-width: 760px; }
+    .page-intro h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; color: var(--navy); margin-bottom: 18px; }
+    .prose { max-width: 790px; }
+    .prose h2 { margin-top: 32px; margin-bottom: 12px; }
+    .prose p { margin-bottom: 18px; }
+    .reveal { scroll-margin-top: 90px; }
+    @media (max-width: 700px) { .evidence-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -208,9 +222,10 @@
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#work">AI work</a>
+        <a href="/projects/">Projects</a>
+        <a href="/benchmarks/">Benchmarks</a>
         <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
+        <a href="/research/">Research</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -219,20 +234,19 @@
   <div id="top" class="hero">
     <div class="wrap hero-in">
       <div class="hero-copy">
-        <span class="eyebrow">Applied AI · Healthcare · Dentistry</span>
+        <span class="eyebrow">Reliable Agentic AI · Healthcare context</span>
         <h1>Mina Maged<br>Zekry Gayid</h1>
         <p class="hero-role">Applied AI Intern · Dentist (BDS) · Healthcare MBA Candidate</p>
-        <p class="hero-loc">Aswan, Egypt</p>
-        <p class="hero-lede">I bring clinical judgment, clinic operations experience, and practical AI fluency to healthcare and business problems that deserve a thoughtful, useful solution.</p>
+        <p class="hero-loc">Egypt · Open to remote opportunities</p>
+        <p class="hero-lede">Reliable agentic AI for high-stakes systems. I build reviewable workflows around tool permissions, source provenance, failure analysis and human judgment, informed by my work in dentistry and clinic operations.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="mailto:minagayid@gmail.com">Start a conversation</a>
-          <a class="button button-ghost" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">View LinkedIn</a>
-          <a class="button button-ghost" href="#experience">Explore experience</a>
+          <a class="button button-primary" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="button button-ghost" href="https://github.com/minagayid" target="_blank" rel="noopener">View GitHub</a>
         </div>
       </div>
       <aside class="hero-card" aria-label="Mina's current focus">
         <img class="avatar" src="https://raw.githubusercontent.com/minagayid/minagayid/main/assets/mina-headshot-suit.jpg" alt="Mina Maged Zekry Gayid">
-        <p><strong>Current focus</strong>Applied AI workflows, healthcare management, and responsible technology adoption.</p>
+        <p><strong>Current focus</strong>Agent evaluation, bounded workflow runtimes, and healthcare research with explicit evidence gates.</p>
       </aside>
     </div>
   </div>
@@ -243,7 +257,7 @@
       <div class="story-grid">
         <article class="story-card">
           <h3>A practical bridge between care and technology.</h3>
-          <p>I am a practicing dentist and dental clinic owner based in Aswan, Egypt, with a BDS from Modern Sciences and Arts University and an MBA in Hospital and Healthcare Facilities Administration in progress. Alongside clinical and operational work, I am building hands-on fluency in Claude, prompt engineering, generative AI, data analysis, and AI-assisted workflows.</p>
+          <p>I am a practicing dentist and dental clinic owner based in Egypt, with a BDS from Modern Sciences and Arts University and an MBA in Hospital and Healthcare Facilities Administration in progress. Alongside clinical and operational work, I am building hands-on fluency in Claude, prompt engineering, generative AI, data analysis, and AI-assisted workflows.</p>
         </article>
         <article class="story-card">
           <ul class="fact-list">
@@ -275,11 +289,9 @@
     </section>
 
     <section class="block reveal" id="work">
-      <div class="section-heading"><span class="section-number">03</span><h2>Selected AI work</h2><span class="section-rule"></span></div>
-      <article class="card project-card">
-        <div><span class="project-label">Applied AI and Claude Workflow Portfolio</span><h3>Turning model capabilities into practical, reviewable workflows.</h3><p class="card-meta">FlyRank AI internship / Anthropic Academy · Jul 2026</p><ul class="bullet-list"><li>Completed hands-on exercises covering Claude API use, prompt engineering, research and file workflows, model limitations, and human-in-the-loop review.</li><li>Structured healthcare and business scenarios into reusable prompt-driven workflows and evaluated outputs for relevance, limitations, and responsible use.</li></ul><p class="card-meta"><a class="text-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">Connect with Mina on LinkedIn →</a></p></div>
-        <div class="project-badge"><span>7</span>Anthropic Academy<br>credentials</div>
-      </article>
+      <div class="section-heading"><span class="section-number">03</span><h2>Selected engineering work</h2><span class="section-rule"></span></div>
+      <p style="margin-bottom:24px">Working code, reproducible checks, and visible limitations. Each project distinguishes synthetic contract checks from real-world performance.</p>
+      <div class="evidence-grid"><article class="card"><span class="project-label">Flagship · agent evaluation</span><h3>Agent Eval Lab</h3><span class="evidence-label">100 synthetic fixture variants</span><p>FastAPI and React dashboard, strict prediction contracts, trace scoring, failure taxonomy and regression reports. Scripted controls score 50/100 and 100/100; this measures evaluator behavior, not LLM capability.</p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/agent-eval-lab" target="_blank" rel="noopener">Source and evidence →</a></p></article><article class="card"><span class="project-label">Workflow runtime</span><h3>Personizer</h3><span class="evidence-label">Synthetic workflows only</span><p>Fixed skills, explicit workflow states, role allowlists, bounded steps, repeated-step detection and trace export. A single-use local approval seam binds to the exact proposal; production reviewer authentication remains pending.</p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/personizer" target="_blank" rel="noopener">Source and evidence →</a></p></article><article class="card"><span class="project-label">Memory and state</span><h3>NovaDB</h3><span class="evidence-label">Scope · provenance · TTL</span><p>Agent summaries carry provenance metadata. Cross-scope memory-ID overwrites are rejected, and tests cover session visibility, TTL expiry and durable reopen. Comparable database benchmarks remain pending.</p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/novadb-engine" target="_blank" rel="noopener">Source and evidence →</a></p></article><article class="card"><span class="project-label">Imaging research</span><h3>Radiograph Ready</h3><span class="evidence-label">Quality regression · weak labels</span><p>An image-quality research baseline with documented exact-image grouped folds. New split validation rejects missing patient IDs and leakage. Expert labels, patient-disjoint analysis and external clinical validation remain pending.</p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/AIih_2026" target="_blank" rel="noopener">Source and evidence →</a></p></article><article class="card"><span class="project-label">Scientific retrieval</span><h3>Genopedia + Neurapedia</h3><span class="evidence-label">Offline research contracts</span><p>Genopedia binds lexical retrieval to source URLs, versions, license labels and SHA256 hashes. Neurapedia adds Dice/IoU, calibration and error-count metrics. Current new fixtures test contracts; no diagnostic claim.</p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/genopedia" target="_blank" rel="noopener">Source and evidence →</a></p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/neurapedia" target="_blank" rel="noopener">Neurapedia source →</a></p></article><article class="card"><span class="project-label">Safety simulation</span><h3>Robotic surgery simulation</h3><span class="evidence-label">8 deterministic scenarios</span><p>Existing supervisor exercised by healthy control and seven faults: sensor dropout, latency, pose dimensions, workspace limits, unauthorized controller, emergency stop and command replay. No hardware or tissue execution.</p><p class="card-meta"><a class="text-link" href="https://github.com/minagayid/robotic-surgery" target="_blank" rel="noopener">Source and evidence →</a></p></article></div>
     </section>
 
     <section class="block reveal" id="education">
@@ -302,21 +314,22 @@
       </div>
     </section>
 
+<section class="block reveal" id="benchmarks"><div class="section-heading"><span class="section-number">06</span><h2>Benchmarks</h2><span class="section-rule"></span></div><article class="card"><p>The current evaluator uses ten task templates with ten fixture variants each. The v1 and v2 agents are deterministic scripted controls with explicit tool requests. A perfect control score verifies the fixture path; it does not establish autonomous AI capability.</p><div class="table-scroll"><table class="evidence-table"><thead><tr><th>Observed metric</th><th>v1</th><th>v2</th><th>Eligible fixtures</th></tr></thead><tbody><tr><td>Task success</td><td>50/100</td><td>100/100</td><td>100</td></tr><tr><td>Citation accuracy</td><td>0%</td><td>100%</td><td>20</td></tr><tr><td>Transient recovery</td><td>0/10</td><td>10/10</td><td>10</td></tr><tr><td>Unauthorized attempts</td><td>10/100</td><td>0/100</td><td>100</td></tr><tr><td>Success regressions</td><td>—</td><td>0</td><td>100</td></tr></tbody></table></div><p class="card-meta">Generated 30 September 2026. Groundedness, hallucination rate, tokens and monetary cost are unobserved and remain null. No unsupported numerical estimate is substituted.</p><p><a class="text-link" href="/benchmarks/v2-report.html">Inspect the full report →</a> · <a class="text-link" href="/benchmarks/latest.json">Download JSON</a> · <a class="text-link" href="https://github.com/minagayid/agent-eval-lab">Reproduce from source</a></p></article></section><section class="block reveal" id="research"><div class="section-heading"><span class="section-number">07</span><h2>Research &amp; evidence</h2><span class="section-rule"></span></div><article class="card"><h3>ELLM failed its safety promotion gate.</h3><p>79/256 exact answers on its synthetic held-out test; 177/192 non-release cases were incorrectly released. The rejected adapter and its limits are documented. Real agent, clinical and hardware validation remain open research gates.</p><p class="card-meta"><a class="text-link" href="/research/">Research details →</a> · <a class="text-link" href="/publications/">Engineering notes</a></p></article></section>
     <section class="block reveal">
       <div class="now">
         <h2>Currently</h2>
-        <ul class="now-list"><li>Growing Happy Dental Clinic while studying toward an MBA.</li><li>Building practical skills in AI-assisted workflows, data analysis, and programming.</li><li>Open to collaboration at the intersection of healthcare, business, and technology.</li></ul>
+        <ul class="now-list"><li>Growing Happy Dental Clinic while studying toward an MBA.</li><li>Building trace-based agent evaluation and source-aware research tools.</li><li>Seeking remote opportunities; research and clinical claims remain tied to published evidence.</li></ul>
       </div>
     </section>
 
     <section class="contact reveal" id="contact">
       <h2>Let's build something useful.</h2>
-      <p>Open to thoughtful conversations about healthcare, business, and applied AI.</p>
-      <div class="contact-links"><a class="contact-link" href="mailto:minagayid@gmail.com">minagayid@gmail.com</a><a class="contact-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">LinkedIn</a><a class="contact-link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a></div>
+      <p>Open to remote applied AI roles, internships and collaborations in agent evaluation and healthcare technology.</p>
+      <div class="contact-links"><a class="contact-link" href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">LinkedIn</a><a class="contact-link" href="https://github.com/minagayid" target="_blank" rel="noopener">GitHub</a></div>
     </section>
   </main>
 
-  <footer>&copy; <span id="year"></span> Mina Maged Zekry Gayid · Aswan, Egypt</footer>
+  <footer>&copy; <span id="year"></span> Mina Maged Zekry Gayid · Egypt</footer>
 
   <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false" aria-controls="assistant"><span class="assistant-pulse" aria-hidden="true"></span><span class="assistant-toggle-copy"><strong>Mina AI</strong><small>How can I help?</small></span><span class="assistant-toggle-action">Open</span></button>
   <aside class="chat" id="assistant" hidden role="dialog" aria-label="Mina AI portfolio guide">
@@ -324,8 +337,7 @@
     <div class="chat-body">
       <div id="chatTranscript" aria-live="polite"><p class="chat-message">Hi — how can I help you today?</p></div>
       <form class="chat-form" id="chatForm"><label class="sr-only" for="chatInput">Ask Mina AI a question</label><input id="chatInput" maxlength="600" autocomplete="off" placeholder="Ask about Mina's work..."><button type="submit">Send</button></form>
-      <button class="chat-contact" id="leadToggle" type="button">Send a collaboration brief -&gt;</button>
-      <form class="lead-form" id="leadForm" hidden><p>Nothing is sent automatically. Share only what you choose, then review the email before sending.</p><input id="leadName" placeholder="Your name (optional)"><input id="leadEmail" type="email" placeholder="Your email (optional)"><input id="leadOrg" placeholder="Company or organisation (optional)"><textarea id="leadMessage" required placeholder="Role, project, or collaboration need"></textarea><label><input id="leadConsent" type="checkbox"> I consent to sending this brief to Mina by email.</label><button type="submit">Open my email to send</button></form>
+      <p class="chat-contact">For roles and collaboration, use <a href="https://www.linkedin.com/in/mina-maged-zekry-gayid/" target="_blank" rel="noopener">LinkedIn</a>.</p>
     </div>
   </aside>
 
@@ -349,8 +361,6 @@
     const chatForm = document.getElementById("chatForm");
     const chatInput = document.getElementById("chatInput");
     const transcript = document.getElementById("chatTranscript");
-    const leadForm = document.getElementById("leadForm");
-    const leadToggle = document.getElementById("leadToggle");
     const bridgeUrl = document.querySelector('meta[name="mina-ai-bridge"]')?.content || "";
 
     function setAssistantOpen(open) {
@@ -371,8 +381,11 @@
 
     function instantReply(question) {
       const q = question.toLowerCase();
+      if (q.includes("remote")) return "Mina is seeking remote opportunities in applied AI, agent evaluation and healthcare technology. Based in Egypt. Reach Mina through LinkedIn.";
+      if (q.includes("ellm")) return "ELLM is a documented LoRA experiment on SmolLM2-135M-Instruct. Its adapter failed the safety promotion gate and is not approved for operational use. See the research page and model card.";
+      if (q.includes("benchmark") || q.includes("evaluation")) return "Agent Eval Lab evaluates 100 synthetic fixture variants. Scripted controls score 50/100 and 100/100. This tests evaluator contracts; it is not an LLM performance claim. The benchmark page contains the full report.";
       if (q.includes("fit") || q.includes("hire") || q.includes("team") || q.includes("role")) return "Mina is a strong fit for work where clinical context, real-world healthcare operations, and growing AI fluency need to meet. Mina can help teams understand the problem behind a workflow and communicate across clinical, business, and technical perspectives. What outcome is your team trying to improve?";
-      if (q.includes("contribute") || q.includes("project") || q.includes("strength")) return "Mina can contribute to workflow discovery, healthcare and clinic-operations thinking, AI-assisted research and file workflows, prompt design, and clear communication between clinical and technical stakeholders. Mina's approach is practical and grounded in human review.";
+      if (q.includes("contribute") || q.includes("project") || q.includes("strength")) return "Mina's public projects include Agent Eval Lab, Personizer, NovaDB, Radiograph Ready, Genopedia, Neurapedia and a robotics safety simulator. They focus on inspectable traces, permissions, provenance and evaluation. New checks use synthetic fixtures; clinical and hardware validation remain pending.";
       if (q.includes("approach") || q.includes("work") || q.includes("problem")) return "Mina starts by clarifying the patient, team, or business need; defining a useful outcome; mapping constraints; and testing a focused path. Mina pays attention to model limitations and keeps people in the loop where judgment matters.";
       if (q.includes("skill") || q.includes("ai") || q.includes("technical")) return "Mina's AI skills include Claude API use, prompt engineering, generative AI, AI workflow design, responsible AI, and evaluating model capabilities and limitations. Mina also has working knowledge of Python, SQL, HTML, CSS, JavaScript, Power BI, Tableau, and Excel.";
       if (q.includes("experience") || q.includes("background") || q.includes("career")) return "Mina is currently an Applied AI Intern at FlyRank AI, owns and practices at Happy Dental Clinic, and previously worked as a dentist in Egypt Healthcare Authority primary care. Mina is also pursuing an MBA focused on hospital and healthcare facilities administration.";
@@ -425,19 +438,11 @@
         chatInput.disabled = false;
         chatInput.focus();
       }
-      if (/\b(hire|hiring|job|role|collaborat|partner|project|consult)\b/i.test(cleaned)) leadForm.hidden = false;
+      if (/\b(hire|hiring|job|role|collaborat|partner|project|consult)\b/i.test(cleaned)) response.textContent += " For roles and collaboration, reach Mina through LinkedIn.";
     }
 
     chatForm.addEventListener("submit", (event) => { event.preventDefault(); void askMina(chatInput.value); });
     document.querySelectorAll("[data-question]").forEach((button) => button.addEventListener("click", () => void askMina(button.dataset.question || "")));
-    leadToggle.addEventListener("click", () => { leadForm.hidden = !leadForm.hidden; });
-    leadForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const message = document.getElementById("leadMessage").value.trim();
-      if (!message || !document.getElementById("leadConsent").checked) return;
-      const body = ["Name: " + (document.getElementById("leadName").value || "Not provided"), "Email: " + (document.getElementById("leadEmail").value || "Not provided"), "Organisation: " + (document.getElementById("leadOrg").value || "Not provided"), "", "Collaboration / job enquiry:", message, "", "Sent with the visitor's consent from Mina AI."].join("\n");
-      window.location.href = "mailto:minagayid@gmail.com?subject=" + encodeURIComponent("New collaboration or job enquiry from Mina AI") + "&body=" + encodeURIComponent(body);
-    });
   </script>
 </body>
 </html>
